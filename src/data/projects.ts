@@ -21,7 +21,7 @@ export const projects: Project[] = [
       'HTML5',
       'CSS3',
     ],
-    liveUrl: 'https://vue-weather-app-pied.vercel.app/',
+    liveUrl: 'vue-weather-app-pied.vercel.app',
     githubUrl: 'PASTE_YOUR_GITHUB_REPOSITORY_LINK_HERE',
   },
   {
