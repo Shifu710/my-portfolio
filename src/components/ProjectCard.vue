@@ -9,6 +9,12 @@
         <span class="weather-cloud weather-cloud--one" />
         <span class="weather-cloud weather-cloud--two" />
       </div>
+      <div v-if="project.imageVariant === 'commerce'" class="commerce-preview" aria-hidden="true">
+        <span class="commerce-bag" />
+        <span class="commerce-card commerce-card--one" />
+        <span class="commerce-card commerce-card--two" />
+        <span class="commerce-card commerce-card--three" />
+      </div>
       <img v-if="project.imageSrc" :src="project.imageSrc" :alt="`${project.title} preview`" />
       <span>{{ project.imageLabel }}</span>
     </div>

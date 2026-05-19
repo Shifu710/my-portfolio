@@ -436,6 +436,18 @@ textarea {
     var(--surface-strong);
 }
 
+.project-image--commerce {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(38, 212, 200, 0.32), transparent 8rem),
+    linear-gradient(
+      145deg,
+      rgba(15, 23, 42, 0.95),
+      rgba(79, 140, 255, 0.52) 54%,
+      rgba(124, 92, 255, 0.72)
+    ),
+    var(--surface-strong);
+}
+
 .project-image span {
   position: relative;
   z-index: 2;
@@ -461,11 +473,94 @@ textarea {
   transform: scale(1.04);
 }
 
-.project-image img + span {
+.project-image img + span,
+.project-image--commerce > span {
   padding: 8px 14px;
   border-radius: 999px;
   background: rgba(11, 16, 32, 0.62);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.commerce-preview {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.commerce-bag,
+.commerce-card {
+  position: absolute;
+  display: block;
+}
+
+.commerce-bag {
+  left: 34px;
+  top: 38px;
+  width: 82px;
+  height: 92px;
+  border-radius: 14px 14px 18px 18px;
+  background: linear-gradient(160deg, #26d4c8, #4f8cff);
+  box-shadow: 0 18px 36px rgba(6, 18, 48, 0.34);
+}
+
+.commerce-bag::before {
+  position: absolute;
+  top: -18px;
+  left: 21px;
+  width: 38px;
+  height: 34px;
+  border: 6px solid rgba(255, 255, 255, 0.74);
+  border-bottom: 0;
+  border-radius: 24px 24px 0 0;
+  content: '';
+}
+
+.commerce-card {
+  right: 34px;
+  width: 118px;
+  height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 34px rgba(6, 18, 48, 0.24);
+}
+
+.commerce-card::before,
+.commerce-card::after {
+  position: absolute;
+  left: 14px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  content: '';
+}
+
+.commerce-card::before {
+  top: 16px;
+  width: 52px;
+}
+
+.commerce-card::after {
+  top: 32px;
+  width: 82px;
+  opacity: 0.46;
+}
+
+.commerce-card--one {
+  top: 34px;
+}
+
+.commerce-card--two {
+  top: 104px;
+  right: 74px;
+  opacity: 0.72;
+}
+
+.commerce-card--three {
+  top: 174px;
+  transform: translateY(-22px);
+  opacity: 0.52;
 }
 
 .weather-preview {
