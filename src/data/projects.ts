@@ -23,7 +23,7 @@ export const projects: Project[] = [
       'CSS3',
     ],
     liveUrl: 'https://vue-weather-app-pied.vercel.app/',
-    githubUrl: 'PASTE_YOUR_GITHUB_REPOSITORY_LINK_HERE',
+    githubUrl: 'https://github.com/Shifu710/vue-weather-app',
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       'VueUse',
       'ECharts',
     ],
-    liveUrl: 'PASTE_YOUR_TASKFLOW_LIVE_DEMO_LINK_HERE',
+    liveUrl: 'https://todo-task-manager-gilt.vercel.app/',
     githubUrl: 'https://github.com/Shifu710/todo-task-manager',
   },
   {
