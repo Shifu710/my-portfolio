@@ -9,6 +9,7 @@
         <span class="weather-cloud weather-cloud--one" />
         <span class="weather-cloud weather-cloud--two" />
       </div>
+      <img v-if="project.imageSrc" :src="project.imageSrc" :alt="`${project.title} preview`" />
       <span>{{ project.imageLabel }}</span>
     </div>
 

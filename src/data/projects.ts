@@ -1,4 +1,5 @@
 import type { Project } from '@/types/portfolio'
+import taskflowPreview from '@/assets/taskflow-dashboard.png'
 
 const demoUrl = 'https://example.com'
 
@@ -26,6 +27,27 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: 'TaskFlow Manager',
+    description:
+      'A professional todo and task manager built with Vue 3 and TypeScript. It includes a dashboard, task boards, drag-and-drop reordering, filters, dark mode, charts, and persistent localStorage data.',
+    imageLabel: 'TaskFlow',
+    imageSrc: taskflowPreview,
+    technologies: [
+      'Vue 3',
+      'TypeScript',
+      'Vite',
+      'Pinia',
+      'Vue Router',
+      'Element Plus',
+      'Tailwind CSS',
+      'VueUse',
+      'ECharts',
+    ],
+    liveUrl: 'PASTE_YOUR_TASKFLOW_LIVE_DEMO_LINK_HERE',
+    githubUrl: 'https://github.com/Shifu710/todo-task-manager',
+  },
+  {
+    id: 3,
     title: 'Landing Page Website',
     description:
       'A clean marketing landing page focused on responsive layout, strong typography, and conversion-friendly sections.',
@@ -35,7 +57,7 @@ export const projects: Project[] = [
     githubUrl: demoUrl,
   },
   {
-    id: 3,
+    id: 4,
     title: 'Business Website',
     description:
       'A professional multi-section website concept for a local business with service cards and contact areas.',
@@ -45,7 +67,7 @@ export const projects: Project[] = [
     githubUrl: demoUrl,
   },
   {
-    id: 4,
+    id: 5,
     title: 'Product Page',
     description:
       'A product detail interface with feature highlights, pricing information, and reusable UI sections.',
@@ -55,7 +77,7 @@ export const projects: Project[] = [
     githubUrl: demoUrl,
   },
   {
-    id: 5,
+    id: 6,
     title: 'Admin Dashboard',
     description:
       'A dashboard layout concept with cards, metrics, responsive grids, and a clean management UI style.',
@@ -65,7 +87,7 @@ export const projects: Project[] = [
     githubUrl: demoUrl,
   },
   {
-    id: 6,
+    id: 7,
     title: 'Login UI',
     description:
       'A polished authentication screen with form validation-ready structure and professional spacing.',
@@ -75,7 +97,7 @@ export const projects: Project[] = [
     githubUrl: demoUrl,
   },
   {
-    id: 7,
+    id: 8,
     title: 'Mobile Responsive Website',
     description:
       'A mobile-first website concept that adapts smoothly from small screens to full desktop layouts.',
