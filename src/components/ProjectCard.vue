@@ -1,6 +1,14 @@
 <template>
   <article class="project-card">
-    <div class="project-image">
+    <div
+      class="project-image"
+      :class="project.imageVariant ? `project-image--${project.imageVariant}` : ''"
+    >
+      <div v-if="project.imageVariant === 'weather'" class="weather-preview" aria-hidden="true">
+        <span class="weather-sun" />
+        <span class="weather-cloud weather-cloud--one" />
+        <span class="weather-cloud weather-cloud--two" />
+      </div>
       <span>{{ project.imageLabel }}</span>
     </div>
 
@@ -17,7 +25,7 @@
           Live Demo
         </el-button>
         <el-button tag="a" :href="project.githubUrl" target="_blank" rel="noreferrer">
-          GitHub
+          GitHub Repository
         </el-button>
       </div>
     </div>

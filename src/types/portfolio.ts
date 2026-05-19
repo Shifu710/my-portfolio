@@ -9,6 +9,7 @@ export interface Project {
   title: string
   description: string
   imageLabel: string
+  imageVariant?: 'weather'
   technologies: string[]
   liveUrl: string
   githubUrl: string
