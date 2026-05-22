@@ -62,6 +62,7 @@ export const projects: Project[] = [
       'Vant UI',
       'Tailwind CSS',
     ],
+    liveUrl: 'https://e-commerce-product-page-nu-seven.vercel.app/',
     githubUrl: 'https://github.com/Shifu710/e-commerce-product-page',
   },
 ]

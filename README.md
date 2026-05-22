@@ -2,6 +2,10 @@
 
 Personal portfolio for Mohamed Gamal, a Computer Science student focused on frontend development with Vue 3, TypeScript, responsive UI, and clean component architecture.
 
+## Live Site
+
+https://jamiesec.dev/
+
 ## Highlights
 
 - Responsive portfolio with Home, About, Projects, and Contact routes
