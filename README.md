@@ -1,63 +1,55 @@
 # Mohamed Gamal Portfolio
 
-Personal portfolio for Mohamed Gamal, a Computer Science student focused on frontend development with Vue 3, TypeScript, responsive UI, and clean component architecture.
+Premium bilingual portfolio for Mohamed Gamal, an AI-assisted React / Next.js full-stack developer and Computer Science student in Malaysia.
 
 ## Live Site
 
 https://jamiesec.dev/
 
-## Highlights
+## Overview
 
-- Responsive portfolio with Home, About, Projects, and Contact routes
-- Focused project section with real GitHub links and live demos where available
-- Dark/light theme persisted with Pinia and localStorage
-- Reusable components for navigation, section headers, skills, project cards, and timeline items
-- Vercel SPA rewrite configuration for direct route refresh support
+This portfolio presents Mohamed as a practical junior developer who can build modern web applications with React, Next.js, TypeScript, AI tools, and Vercel deployment workflows. It includes English and Chinese content, honest project status badges, case-study pages, a clear AI workflow section, and contact links.
 
 ## Tech Stack
 
-- Vue 3
+- Latest stable Next.js with App Router
+- React
 - TypeScript
-- Vite
-- Vue Router
-- Pinia
-- Element Plus
-- Axios
-- ESLint
-- Prettier
+- Tailwind CSS
+- shadcn/ui-style local components
+- Framer Motion
+- lucide-react
+- next-themes
+- Vercel
 
-## Getting Started
+## Run Locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production Build
+Open `http://localhost:3000`.
+
+## Build
 
 ```bash
 npm run build
-npm run preview
+npm run start
 ```
 
-## Project Structure
+## Deploy
 
-```text
-src/
-  assets/
-  components/
-  composables/
-  data/
-  layouts/
-  router/
-  stores/
-  styles/
-  types/
-  views/
-```
+The project is ready for Vercel. Push to the `main` branch and Vercel will deploy the production site connected to `jamiesec.dev`.
 
-## Portfolio Projects
+## AI-Assisted Workflow
 
-- Weather App: Vue weather dashboard with API integration and recent searches
-- TaskFlow Manager: Task dashboard with boards, filters, charts, and persistent storage
-- E-Commerce Storefront: Product browsing, cart, wishlist, filtering, and mobile navigation
+AI tools were used to plan content structure, improve bilingual copy, generate first UI/component drafts, and check implementation quality. Final code, links, project statuses, and deployment were reviewed manually.
+
+## Editing Content
+
+- Project data: `lib/data/projects.ts`
+- Contact details: `lib/data/contact.ts`
+- English/Chinese text: `lib/i18n/dictionaries.ts`
+
+Unfinished projects use clear status labels and disabled buttons instead of fake links.
