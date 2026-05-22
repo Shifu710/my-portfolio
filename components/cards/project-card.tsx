@@ -26,17 +26,17 @@ export function ProjectCard({
 }) {
   return (
     <Card className="overflow-hidden">
-      <CardContent className="grid gap-6 p-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:p-6">
+      <CardContent className="grid gap-5 p-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
         <ProjectMockup visual={project.visual} />
         <div className="flex flex-col">
           <Badge status={project.status}>{project.statusLabel}</Badge>
-          <h3 className="mt-4 text-xl font-semibold leading-[1.4]">{project.title}</h3>
-          <p className="mt-3 leading-[1.6] text-muted-foreground">{project.description}</p>
-          <div className="mt-5 rounded-2xl border bg-muted p-4">
+          <h3 className="mt-3 text-[16px] font-medium leading-[1.5]">{project.title}</h3>
+          <p className="mt-2 leading-[1.7] text-muted-foreground">{project.description}</p>
+          <div className="mt-4 rounded-lg border bg-muted p-4">
             <p className="text-sm font-medium leading-[1.5] text-foreground">{dictionary.businessValue}</p>
             <p className="mt-2 text-sm leading-[1.6] text-muted-foreground">{project.businessValue}</p>
           </div>
-          <div className="mt-5">
+          <div className="mt-4">
             <p className="text-sm font-medium leading-[1.5]">{dictionary.keyFeatures}</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {project.features.slice(0, 6).map((feature) => (
@@ -46,14 +46,14 @@ export function ProjectCard({
               ))}
             </div>
           </div>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             {project.tech.slice(0, 6).map((tech, index) => (
               <span key={tech} className={`tag ${['tag-purple', 'tag-teal', 'tag-blue', 'tag-coral', 'tag-green', 'tag-amber'][index % 6]}`}>
                 {tech}
               </span>
             ))}
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-3">
             {project.links.live ? (
               <Button asChild size="sm">
                 <a href={project.links.live} target="_blank" rel="noreferrer">

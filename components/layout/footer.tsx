@@ -7,8 +7,8 @@ export function Footer({
   dictionary: { text: string }
 }) {
   return (
-    <footer className="border-t py-10">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+    <footer className="border-t py-8">
+      <div className="mx-auto flex max-w-[1100px] flex-col gap-3 px-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
         <p>&copy; {new Date().getFullYear()} Mohamed Gamal.</p>
         <p>{dictionary.text}</p>
       </div>

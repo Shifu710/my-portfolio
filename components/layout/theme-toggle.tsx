@@ -16,8 +16,8 @@ export function ThemeToggle() {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
     >
       <span className="relative flex h-4 w-4 items-center justify-center">
-        <i className="ti ti-sun text-base transition-transform duration-300 dark:hidden" aria-hidden="true" />
-        <i className="ti ti-moon hidden text-base transition-transform duration-300 dark:inline" aria-hidden="true" />
+        <i className="ti ti-sun theme-icon-sun text-base" aria-hidden="true" />
+        <i className="ti ti-moon theme-icon-moon text-base" aria-hidden="true" />
       </span>
     </Button>
   )

@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  darkMode: 'class',
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: [
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -19,10 +19,6 @@ const config: Config = {
         'card-foreground': 'var(--card-foreground)',
         primary: 'var(--primary)',
         'primary-foreground': 'var(--primary-foreground)',
-      },
-      boxShadow: {
-        card: '0 10px 40px color-mix(in oklch, var(--foreground) 10%, transparent)',
-        soft: '0 18px 60px color-mix(in oklch, var(--foreground) 8%, transparent)',
       },
       fontFamily: {
         sans: ['var(--font-sans)'],

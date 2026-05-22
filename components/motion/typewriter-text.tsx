@@ -39,9 +39,9 @@ export function TypewriterText({
   }, [deleting, displayed, safeWords, wordIndex])
 
   return (
-    <span className="inline-flex min-h-[1.2em] items-center text-[var(--accent-teal-text)]">
+    <span className="inline-flex min-h-[1.2em] items-center text-[var(--color-text-info)]">
       {displayed}
-      <span className="ml-1 inline-block h-[1em] w-[2px] animate-pulse bg-[var(--accent-teal-text)]" />
+      <span className="cursor-blink ml-1 inline-block h-[1em] w-[2px] bg-[var(--color-text-info)]" />
     </span>
   )
 }

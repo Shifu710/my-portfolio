@@ -12,15 +12,15 @@ export function WhyMeSection({
   }
 }) {
   return (
-    <section id="why-me" className="mx-auto max-w-[1200px] px-6 py-24">
+    <section id="why-me" className="mx-auto max-w-[1100px] px-6 py-12">
       <SectionHeading eyebrow={dictionary.eyebrow} title={dictionary.title} />
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-5">
         {dictionary.items.map((item, index) => (
           <Reveal key={item} delay={index * 0.03}>
             <Card className="h-full">
               <CardContent className="p-5">
-                <i className="ti ti-circle-check text-2xl text-[var(--accent-teal-text)]" aria-hidden="true" />
-                <p className="mt-4 leading-[1.6] text-muted-foreground">{item}</p>
+                <i className="ti ti-circle-check text-xl text-[var(--color-text-info)]" aria-hidden="true" />
+                <p className="mt-3 leading-[1.7] text-muted-foreground">{item}</p>
               </CardContent>
             </Card>
           </Reveal>
