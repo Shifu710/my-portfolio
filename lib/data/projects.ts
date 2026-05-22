@@ -83,29 +83,32 @@ export function getProjects(locale: Locale): Project[] {
     },
     {
       slug: 'wechat-booking-ecommerce',
-      title: isZh ? '微信小程序预约 / 电商系统' : 'WeChat Mini Program Booking / E-commerce System',
-      status: 'Planned',
-      statusLabel: isZh ? '计划中' : 'Planned',
+      title: isZh ? 'MiniShop Pro 小店智选' : 'MiniShop Pro',
+      status: 'Live',
+      statusLabel: isZh ? '已上线' : 'Live',
       description: isZh
-        ? '面向中国市场的服务预约或小型电商小程序，并配套 Web 管理后台。'
-        : 'A China-focused mini program for service booking or mini e-commerce, with a web-based admin panel for managing products, orders, and users.',
+        ? '面向中国市场的小型电商与预约系统，包含 H5 小程序预览、商品/分类/订单/预约管理、客户数据、促销和分析后台。'
+        : 'A China-focused mini-commerce and booking system with an H5 mini-program preview, product/catalog management, orders, bookings, customers, promotions, and analytics.',
       businessValue: isZh
-        ? '展示我能构建面向中国市场的移动优先应用，并连接真实管理后台。'
-        : 'Shows ability to build mobile-first China-market applications connected to a real management backend.',
+        ? '帮助小商家快速验证移动端购买、预约和后台运营流程，同时展示我能把中国市场产品思维落到可演示的系统中。'
+        : 'Helps small businesses validate mobile shopping, booking, and admin workflows while showing that I can turn China-market product ideas into a working demo.',
       features: isZh
-        ? ['商品/服务列表', '预约/下单流程', '购物车/收藏', '管理后台', '订单状态', '支付模拟', '移动优先 UI']
-        : ['Product/service listing', 'Booking/order flow', 'Cart/favorites', 'Admin dashboard', 'Order status', 'Payment simulation', 'Mobile-first UI'],
-      tech: ['Taro React', 'WeChat Mini Program', 'Next.js Admin Panel', 'TypeScript', 'Supabase', 'Prisma', 'Ant Design'],
+        ? ['H5 小程序预览', '商品/服务目录', '预约/订单流程', '演示登录', '管理后台', '客户管理', '促销管理', '数据分析', '支付模拟']
+        : ['H5 mini-program preview', 'Product/service catalog', 'Booking/order flows', 'Demo login', 'Admin dashboard', 'Customer management', 'Promotions', 'Analytics', 'Payment simulation'],
+      tech: ['Next.js', 'React', 'TypeScript', 'Ant Design', 'Tailwind CSS', 'Prisma', 'Supabase-ready schema', 'Taro React scaffold', 'Vercel'],
       visual: 'wechat',
-      links: {},
+      links: {
+        live: 'https://minishop-pro.vercel.app',
+        github: 'https://github.com/Shifu710/minishop-pro',
+      },
       caseStudy: {
-        overview: isZh ? '这是一个计划中的中国市场项目。' : 'This is a planned China-market project.',
-        problem: isZh ? '许多小商家需要简单的移动端预约和订单管理能力。' : 'Many small businesses need simple mobile booking and order management.',
-        solution: isZh ? '用小程序做用户端，用 Next.js 后台做管理端。' : 'Use a mini program for customers and a Next.js admin panel for operations.',
-        architecture: isZh ? 'Taro React 小程序连接 Supabase/Prisma 后端，后台负责商品、订单和用户管理。' : 'A Taro React mini program connects to a Supabase/Prisma backend, with an admin panel for product, order, and user management.',
-        aiWorkflow: isZh ? 'AI 用于流程图、表结构、组件拆分和中英文文案。' : 'AI helps with flow diagrams, data models, component breakdown, and bilingual copy.',
-        learning: isZh ? '重点学习微信生态、移动端交互和后台管理流程。' : 'The learning focus is WeChat ecosystem constraints, mobile UX, and admin workflows.',
-        screenshots: isZh ? '设计稿将在项目启动后补充。' : 'Design previews will be added after the project starts.',
+        overview: isZh ? 'MiniShop Pro 是一个已上线的作品集项目，用来展示小程序风格的用户端体验和完整 Web 管理后台。' : 'MiniShop Pro is a live portfolio project showing a mini-program-style customer experience plus a complete web admin dashboard.',
+        problem: isZh ? '很多小商家需要同时处理商品、预约、订单和客户，但早期阶段不适合马上投入复杂系统。' : 'Many small businesses need to manage products, bookings, orders, and customers, but early-stage teams need a practical demo before investing in a complex system.',
+        solution: isZh ? '构建一个 Next.js 演示系统：公开页面介绍业务价值，H5 预览模拟小程序体验，后台负责运营管理和数据分析。' : 'Build a Next.js demo system: a public landing page explains the value, an H5 preview simulates the mini-program experience, and the dashboard handles operations and analytics.',
+        architecture: isZh ? 'Next.js App Router 管理公开页面、后台页面和 mock API；Prisma schema 为 Supabase/PostgreSQL 做准备；Taro 源码脚手架放在 apps/mini-program 方便后续接入微信开发工具。' : 'Next.js App Router manages public pages, dashboard pages, and mock APIs; the Prisma schema prepares for Supabase/PostgreSQL; and a Taro source scaffold lives in apps/mini-program for future WeChat Developer Tools work.',
+        aiWorkflow: isZh ? 'AI 用于拆解需求、生成 mock 数据、规划后台信息架构、润色中英文业务文案，并辅助检查 TypeScript、构建和部署问题。' : 'AI helped break down requirements, generate mock data, plan the dashboard information architecture, refine bilingual business copy, and debug TypeScript, build, and deployment issues.',
+        learning: isZh ? '重点学习小程序式移动端流程、Ant Design 管理后台、演示登录、Vercel 部署、项目文档和诚实展示项目边界。' : 'The main learning areas were mini-program-style mobile flows, Ant Design admin UI, demo authentication, Vercel deployment, project documentation, and honest project scoping.',
+        screenshots: isZh ? '可以通过线上演示查看首页、H5 预览、案例页和后台演示。' : 'The live demo includes the landing page, H5 preview, case study, and dashboard demo.',
       },
     },
     {
