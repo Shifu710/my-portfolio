@@ -41,41 +41,43 @@ export function getProjects(locale: Locale): Project[] {
   return [
     {
       slug: 'ai-customer-support-crm',
-      title: isZh ? 'AI 客服 / WeCom CRM 工作台' : 'AI Customer Support / WeCom CRM Dashboard',
-      status: 'In Progress',
-      statusLabel: isZh ? '进行中' : 'In Progress',
+      title: isZh ? 'SupportPilot AI 客服智舱' : 'SupportPilot AI',
+      status: 'Live',
+      statusLabel: isZh ? '已上线' : 'Live',
       description: isZh
-        ? '面向中小企业的 AI 客服工作台，整合客户管理、聊天收件箱、AI 回复生成、知识库和数据分析。'
-        : 'A full-stack AI customer support dashboard for small businesses, combining CRM, chat inbox, AI reply generation, knowledge base management, and analytics.',
+        ? '面向中小企业和中国市场团队的 AI 客服 / WeCom CRM 工作台，整合客户管理、会话收件箱、AI 回复建议、知识库、数据分析和演示登录。'
+        : 'A production-style AI customer support and WeCom CRM dashboard with CRM, inbox, AI reply suggestions, knowledge base, analytics, templates, settings, and demo login.',
       businessValue: isZh
-        ? '帮助企业更快回复客户、整理对话，并用 AI 提升客服效率。'
-        : 'Helps businesses respond to customers faster, organize conversations, and use AI to improve support efficiency.',
+        ? '帮助客服团队更快整理客户信息、生成可审核的 AI 回复，并用数据了解支持效率。'
+        : 'Helps support teams organize customers, respond faster with reviewed AI suggestions, and understand performance through analytics.',
       features: isZh
-        ? ['登录认证', '客户管理', '聊天收件箱', 'AI 回复生成', '知识库', '会话状态', '管理后台', '数据图表', '中英双语 UI']
-        : ['Authentication', 'Customer management', 'Chat inbox UI', 'AI reply generator', 'Knowledge base', 'Conversation status tracking', 'Admin dashboard', 'Analytics charts', 'Chinese/English UI'],
+        ? ['演示登录', '客户 CRM', '三栏会话收件箱', 'AI 回复建议', '知识库', '数据图表', '模板管理', '设置页', '中英双语 UI']
+        : ['Demo login', 'Customer CRM', 'Three-column inbox', 'AI reply suggestions', 'Knowledge base', 'Analytics charts', 'Templates', 'Settings', 'Chinese/English UI'],
       tech: ['Next.js', 'React', 'TypeScript', 'Ant Design', 'Tailwind CSS', 'Supabase', 'Prisma', 'Vercel AI SDK', 'DeepSeek/Qwen API', 'TanStack Query', 'Zustand'],
       visual: 'ai-crm',
-      links: {},
+      links: {
+        live: 'https://supportpilot-ai-kappa.vercel.app',
+      },
       caseStudy: {
         overview: isZh
-          ? '这是一个正在规划和原型中的旗舰项目，用来展示我如何把 AI 能力放进真实业务流程。'
-          : 'This is a flagship project in planning and prototyping, designed to show how AI can be added to real business workflows.',
+          ? '这是一个已上线的作品集项目，用来展示我如何把 AI 能力放进真实客服工作流，而不是只做一个简单聊天机器人。'
+          : 'This is a live portfolio project that shows how AI can be placed inside a real support workflow instead of a simple chatbot.',
         problem: isZh
           ? '很多小团队客服信息分散、回复慢，也没有统一的知识库和数据视图。'
           : 'Many small teams have scattered customer messages, slow replies, and no shared knowledge base or visibility into support performance.',
         solution: isZh
-          ? '构建一个集成 CRM、会话收件箱、知识库和 AI 回复建议的工作台。'
-          : 'Build a single workspace that combines CRM, conversation inbox, knowledge base content, and AI-generated reply suggestions.',
+          ? '构建一个集成 CRM、会话收件箱、知识库、AI 回复建议、模板和分析图表的工作台。'
+          : 'Build a single workspace that combines CRM, conversation inbox, knowledge base content, AI reply suggestions, templates, and analytics.',
         architecture: isZh
-          ? 'Next.js App Router 负责前端和服务端逻辑，Supabase/PostgreSQL 存储客户、会话和知识库数据，AI API 生成回复建议。'
-          : 'Next.js App Router handles UI and server logic, Supabase/PostgreSQL stores customers, conversations, and knowledge base data, and AI APIs generate reply suggestions.',
+          ? 'Next.js App Router 负责页面和 API，Prisma schema 为 Supabase PostgreSQL 做准备，演示模式使用类型安全 mock 数据和 AI fallback。'
+          : 'Next.js App Router handles pages and APIs, Prisma schema prepares for Supabase PostgreSQL, and demo mode uses typed mock data plus an AI fallback.',
         aiWorkflow: isZh
-          ? '我会用 AI 先做需求拆解、UI 原型、数据库结构草案，再手动审查、测试和改进代码。'
-          : 'I use AI to break down requirements, draft UI flows, plan the database model, and then manually review, test, and improve the code.',
+          ? 'AI 会根据客户消息、客户资料和知识库内容生成建议，但客服必须先审核、编辑，再手动发送。'
+          : 'AI generates suggestions from customer messages, customer profiles, and knowledge base context, but the agent must review, edit, and send manually.',
         learning: isZh
-          ? '重点学习多角色后台、AI 输出质量控制、双语体验和可维护的数据结构。'
-          : 'The main learning goals are multi-role dashboards, AI output quality control, bilingual UX, and maintainable data structures.',
-        screenshots: isZh ? '原型截图将在项目稳定后加入。' : 'Prototype screenshots will be added when the project stabilizes.',
+          ? '重点学习企业级仪表盘信息架构、AI 安全边界、Ant Design 表格、双语体验和可维护数据结构。'
+          : 'The main learning goals were enterprise dashboard architecture, AI safety boundaries, Ant Design tables, bilingual UX, and maintainable data structures.',
+        screenshots: isZh ? '可以通过线上演示查看当前界面。' : 'Available through the live demo.',
       },
     },
     {
