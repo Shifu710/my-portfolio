@@ -14,14 +14,11 @@ export function ThemeToggle() {
       size="sm"
       aria-label="Toggle theme"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      suppressHydrationWarning
     >
-      <i
-        className={`ti ${isDark ? 'ti-moon' : 'ti-sun'} text-base transition-transform duration-300 ${
-          isDark ? 'rotate-180' : 'rotate-0'
-        }`}
-        aria-hidden="true"
-      />
+      <span className="relative flex h-4 w-4 items-center justify-center">
+        <i className="ti ti-sun text-base transition-transform duration-300 dark:hidden" aria-hidden="true" />
+        <i className="ti ti-moon hidden text-base transition-transform duration-300 dark:inline" aria-hidden="true" />
+      </span>
     </Button>
   )
 }
