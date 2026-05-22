@@ -10,12 +10,12 @@ export function SectionHeading({
   description?: string
 }) {
   return (
-    <Reveal className="mx-auto mb-12 max-w-3xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">{eyebrow}</p>
-      <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-5xl">
+    <Reveal className="mb-8 max-w-[720px]">
+      <p className="text-[13px] font-normal leading-[1.5] text-muted-foreground">{eyebrow}</p>
+      <h2 className="mt-2 text-balance text-[18px] font-medium leading-[1.4]">
         {title}
       </h2>
-      {description ? <p className="mt-4 text-lg leading-8 text-muted-foreground">{description}</p> : null}
+      {description ? <p className="mt-3 text-[16px] leading-[1.7] text-muted-foreground">{description}</p> : null}
     </Reveal>
   )
 }

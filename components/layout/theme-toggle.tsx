@@ -1,6 +1,5 @@
 'use client'
 
-import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
@@ -17,7 +16,7 @@ export function ThemeToggle() {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       suppressHydrationWarning
     >
-      {isDark ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+      <i className={`ti ${isDark ? 'ti-moon' : 'ti-sun'} text-[16px]`} aria-hidden="true" />
     </Button>
   )
 }

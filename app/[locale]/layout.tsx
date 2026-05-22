@@ -25,9 +25,7 @@ export default async function LocaleLayout({
   const dictionary = getDictionary(locale as Locale)
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-grid-pattern bg-[size:72px_72px] opacity-40" />
-      <div className="pointer-events-none fixed left-1/2 top-0 -z-10 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
+    <div className="min-h-screen">
       <Navbar locale={locale as Locale} dictionary={dictionary.nav} />
       {children}
       <Footer locale={locale as Locale} dictionary={dictionary.footer} />

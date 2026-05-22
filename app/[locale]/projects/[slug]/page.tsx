@@ -1,4 +1,3 @@
-import { ArrowLeft, ExternalLink, GitBranch } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -37,62 +36,60 @@ export default async function ProjectCaseStudyPage({
   }
 
   const sections = [
-    ['Overview', project.caseStudy.overview],
-    ['Problem', project.caseStudy.problem],
-    ['Solution', project.caseStudy.solution],
-    ['Key Features', project.features.join(' / ')],
-    ['Tech Stack', project.tech.join(' / ')],
-    ['Architecture', project.caseStudy.architecture],
-    ['AI-Assisted Workflow', project.caseStudy.aiWorkflow],
-    ['Challenges & What I Learned', project.caseStudy.learning],
-    ['Screenshots', project.caseStudy.screenshots],
+    ['overview', project.caseStudy.overview],
+    ['problem', project.caseStudy.problem],
+    ['solution', project.caseStudy.solution],
+    ['key features', project.features.join(' / ')],
+    ['tech stack', project.tech.join(' / ')],
+    ['architecture', project.caseStudy.architecture],
+    ['AI-assisted workflow', project.caseStudy.aiWorkflow],
+    ['challenges and what I learned', project.caseStudy.learning],
+    ['screenshots', project.caseStudy.screenshots],
   ]
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 pb-24 pt-28 sm:px-6">
+    <main className="mx-auto w-full max-w-[1100px] px-4 py-12 sm:px-6">
       <Link
         href={`/${locale}#projects`}
-        className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition hover:text-foreground"
+        className="mb-8 inline-flex items-center gap-2 rounded-[var(--border-radius-md)] text-[14px] text-muted-foreground transition hover:text-foreground"
       >
-        <ArrowLeft className="h-4 w-4" />
+        <i className="ti ti-arrow-left text-[16px]" aria-hidden="true" />
         {dictionary.projects.backToProjects}
       </Link>
 
-      <section className="grid gap-8 lg:grid-cols-[1fr_360px]">
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div>
           <Badge status={project.status}>{project.statusLabel}</Badge>
-          <h1 className="mt-5 max-w-3xl text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
+          <h1 className="mt-5 max-w-[720px] text-balance text-[22px] font-medium leading-[1.3]">
             {project.title}
           </h1>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">
+          <p className="mt-4 max-w-[720px] text-[16px] leading-[1.7] text-muted-foreground">
             {project.description}
           </p>
         </div>
 
         <Card className="h-fit">
           <CardContent className="space-y-4 p-5">
-            <p className="text-sm font-medium text-muted-foreground">{dictionary.projects.actions}</p>
+            <p className="text-[13px] font-medium leading-[1.5] text-muted-foreground">{dictionary.projects.actions}</p>
             <div className="grid gap-3">
               {project.links.live ? (
                 <Button asChild>
                   <a href={project.links.live} target="_blank" rel="noreferrer">
-                    <ExternalLink className="h-4 w-4" />
-                    Live Demo
+                    live demo ↗
                   </a>
                 </Button>
               ) : (
-                <Button disabled>Live Demo Coming Soon</Button>
+                <Button disabled>live demo coming soon</Button>
               )}
               {project.links.github ? (
                 <Button asChild variant="secondary">
                   <a href={project.links.github} target="_blank" rel="noreferrer">
-                    <GitBranch className="h-4 w-4" />
-                    GitHub
+                    github ↗
                   </a>
                 </Button>
               ) : (
                 <Button disabled variant="secondary">
-                  GitHub Coming Soon
+                  github coming soon
                 </Button>
               )}
             </div>
@@ -100,12 +97,12 @@ export default async function ProjectCaseStudyPage({
         </Card>
       </section>
 
-      <section className="mt-14 grid gap-4">
+      <section className="mt-10 grid gap-4">
         {sections.map(([title, content]) => (
           <Card key={title}>
             <CardContent className="p-6">
-              <h2 className="text-xl font-semibold">{title}</h2>
-              <p className="mt-3 leading-7 text-muted-foreground">{content}</p>
+              <h2 className="text-[18px] font-medium leading-[1.4]">{title}</h2>
+              <p className="mt-3 text-[16px] leading-[1.7] text-muted-foreground">{content}</p>
             </CardContent>
           </Card>
         ))}

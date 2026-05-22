@@ -1,10 +1,9 @@
-import { Code2, Database, Sparkles, Wrench } from 'lucide-react'
-
 import { Reveal } from '@/components/motion/reveal'
 import { Card, CardContent } from '@/components/ui/card'
 import { SectionHeading } from '@/components/sections/section-heading'
 
-const icons = [Code2, Database, Sparkles, Wrench]
+const icons = ['ti-code', 'ti-database', 'ti-sparkles', 'ti-tools']
+const tagClasses = ['tag-purple', 'tag-teal', 'tag-blue', 'tag-coral', 'tag-green', 'tag-amber']
 
 export function SkillsSection({
   dictionary,
@@ -16,24 +15,24 @@ export function SkillsSection({
   }
 }) {
   return (
-    <section id="skills" className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
+    <section id="skills" className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
       <SectionHeading eyebrow={dictionary.eyebrow} title={dictionary.title} />
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {dictionary.groups.map(([title, skills], index) => {
-          const Icon = icons[index]
+          const icon = icons[index]
           return (
             <Reveal key={title} delay={index * 0.06}>
               <Card className="h-full">
-                <CardContent className="p-6">
+                <CardContent className="p-5">
                   <div className="flex items-center gap-3">
-                    <span className="grid h-11 w-11 place-items-center rounded-2xl bg-violet-400/15 text-violet-200">
-                      <Icon className="h-5 w-5" />
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-secondary)] text-muted-foreground">
+                      <i className={`ti ${icon} text-[20px]`} aria-hidden="true" />
                     </span>
-                    <h3 className="text-xl font-semibold">{title}</h3>
+                    <h3 className="text-[16px] font-medium leading-[1.5]">{title}</h3>
                   </div>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {skills.map((skill) => (
-                      <span key={skill} className="rounded-full border border-white/10 bg-white/7 px-3 py-1.5 text-sm text-muted-foreground">
+                  <div className="mt-5 flex flex-wrap gap-[6px]">
+                    {skills.map((skill, skillIndex) => (
+                      <span key={skill} className={`tag ${tagClasses[skillIndex % tagClasses.length]}`}>
                         {skill}
                       </span>
                     ))}

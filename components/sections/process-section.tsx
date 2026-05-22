@@ -12,19 +12,18 @@ export function ProcessSection({
   }
 }) {
   return (
-    <section id="process" className="mx-auto max-w-5xl px-4 py-24 sm:px-6">
+    <section id="process" className="mx-auto max-w-[720px] px-4 py-12 sm:px-6">
       <SectionHeading eyebrow={dictionary.eyebrow} title={dictionary.title} />
       <div className="relative grid gap-5">
-        <div className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-cyan-300 via-violet-300 to-transparent md:block" />
+        <div className="absolute left-0 top-0 hidden h-full border-l md:block" />
         {dictionary.steps.map(([title, text], index) => (
           <Reveal key={title} delay={index * 0.05}>
-            <div className="relative md:pl-16">
-              <span className="absolute left-3 top-5 hidden h-6 w-6 -translate-x-1/2 rounded-full border border-cyan-200 bg-background shadow-glow md:block" />
+            <div className="relative md:pl-8">
               <Card>
                 <CardContent className="p-5">
-                  <p className="text-sm font-semibold text-cyan-300">Step {index + 1}</p>
-                  <h3 className="mt-2 text-xl font-semibold">{title}</h3>
-                  <p className="mt-3 leading-7 text-muted-foreground">{text}</p>
+                  <p className="text-[13px] font-normal leading-[1.5] text-muted-foreground">step {index + 1}</p>
+                  <h3 className="mt-2 text-[16px] font-medium leading-[1.5]">{title}</h3>
+                  <p className="mt-3 text-[14px] leading-[1.6] text-muted-foreground">{text}</p>
                 </CardContent>
               </Card>
             </div>

@@ -1,4 +1,3 @@
-import { ArrowDown, ArrowRight, MapPin, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 
 import { Reveal } from '@/components/motion/reveal'
@@ -24,31 +23,26 @@ export function HeroSection({
   }
 }) {
   return (
-    <section id="home" className="relative mx-auto grid min-h-screen w-full max-w-7xl items-center px-4 pb-20 pt-28 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
-      <div className="absolute left-12 top-32 h-24 w-24 rounded-full bg-cyan-300/20 blur-3xl" />
-      <div className="absolute bottom-24 right-10 h-32 w-32 rounded-full bg-violet-400/20 blur-3xl" />
-
+    <section id="home" className="mx-auto grid w-full max-w-[1100px] gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_360px]">
       <Reveal>
-        <div className="flex flex-wrap gap-3">
-          <Badge>
-            <Sparkles className="mr-2 h-3.5 w-3.5" />
+        <div className="flex flex-wrap gap-2">
+          <Badge status="In Progress">
+            <i className="ti ti-star mr-1.5 text-[14px]" aria-hidden="true" />
             {dictionary.badgeOne}
           </Badge>
           <Badge>{dictionary.badgeTwo}</Badge>
         </div>
-        <h1 className="mt-7 max-w-4xl text-balance text-5xl font-semibold tracking-tight sm:text-7xl">
-          <span className="bg-gradient-to-r from-cyan-200 via-white to-violet-200 bg-clip-text text-transparent">
-            {dictionary.headline}
-          </span>
+        <h1 className="mt-6 max-w-[720px] text-balance text-[22px] font-medium leading-[1.3]">
+          {dictionary.headline}
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+        <p className="mt-4 max-w-[720px] text-[16px] leading-[1.7] text-muted-foreground">
           {dictionary.subtitle}
         </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Button asChild size="lg">
             <Link href={`/${locale}#projects`}>
               {dictionary.primaryCta}
-              <ArrowRight className="h-4 w-4" />
+              <i className="ti ti-arrow-right text-[16px]" aria-hidden="true" />
             </Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
@@ -57,35 +51,35 @@ export function HeroSection({
         </div>
         <Link
           href={`/${locale}#about`}
-          className="mt-12 inline-flex items-center gap-2 text-sm text-muted-foreground transition hover:text-foreground"
+          className="mt-8 inline-flex items-center gap-2 rounded-[var(--border-radius-md)] px-0 text-[14px] leading-[1.5] text-muted-foreground transition hover:text-foreground"
         >
-          <ArrowDown className="h-4 w-4 animate-bounce" />
+          <i className="ti ti-arrow-down text-[16px]" aria-hidden="true" />
           {dictionary.scroll}
         </Link>
       </Reveal>
 
       <Reveal delay={0.15}>
-        <Card className="relative mt-12 overflow-hidden p-2 lg:mt-0">
-          <CardContent className="rounded-[1.35rem] border border-white/10 bg-slate-950/50 p-5">
+        <Card className="h-fit">
+          <CardContent className="p-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground">Availability</p>
-                <h2 className="mt-1 text-2xl font-semibold">Developer Profile</h2>
+                <p className="text-[13px] leading-[1.5] text-muted-foreground">availability</p>
+                <h2 className="mt-1 text-[18px] font-medium leading-[1.4]">developer profile</h2>
               </div>
-              <span className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300 text-slate-950">
-                <MapPin className="h-5 w-5" />
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-background-info)] text-[var(--color-text-info)]">
+                <i className="ti ti-map-pin text-[20px]" aria-hidden="true" />
               </span>
             </div>
-            <div className="mt-6 grid gap-3">
+            <div className="mt-5 grid gap-3">
               {dictionary.availability.map(([label, value]) => (
-                <div key={label} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                <div key={label} className="card-metric flex items-center justify-between px-4 py-3">
                   <span className="text-muted-foreground">{label}</span>
-                  <span className="font-medium">{value}</span>
+                  <span className="font-medium text-foreground">{value}</span>
                 </div>
               ))}
             </div>
-            <div className="mt-6 rounded-2xl bg-gradient-to-br from-cyan-300/20 to-violet-400/20 p-4">
-              <p className="text-sm leading-6 text-cyan-50/90">
+            <div className="mt-5 rounded-[var(--border-radius-lg)] border bg-[var(--color-background-secondary)] p-4">
+              <p className="text-[14px] leading-[1.6] text-muted-foreground">
                 React / Next.js developer focused on practical business apps, bilingual communication, and AI-assisted delivery.
               </p>
             </div>
