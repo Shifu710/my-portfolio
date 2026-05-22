@@ -8,7 +8,7 @@ export function Card({
   children: React.ReactNode
 }) {
   return (
-    <div className={cn('card', className)}>
+    <div className={cn('card card-hover', className)}>
       {children}
     </div>
   )

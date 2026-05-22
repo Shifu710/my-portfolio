@@ -13,16 +13,16 @@ export function AiWorkflowSection({
   }
 }) {
   return (
-    <section className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
+    <section className="mx-auto max-w-[1200px] px-6 py-24">
       <SectionHeading eyebrow={dictionary.eyebrow} title={dictionary.title} />
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_360px]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
         <div className="grid gap-3 sm:grid-cols-2">
           {dictionary.points.map((point, index) => (
             <Reveal key={point} delay={index * 0.04}>
               <Card className="h-full">
                 <CardContent className="flex gap-3 p-5">
-                  <i className="ti ti-sparkles mt-0.5 shrink-0 text-[18px] text-muted-foreground" aria-hidden="true" />
-                  <p className="text-[14px] leading-[1.6] text-muted-foreground">{point}</p>
+                  <i className="ti ti-sparkles mt-0.5 shrink-0 text-xl text-[var(--accent-purple-text)]" aria-hidden="true" />
+                  <p className="text-sm leading-[1.6] text-muted-foreground">{point}</p>
                 </CardContent>
               </Card>
             </Reveal>
@@ -31,8 +31,8 @@ export function AiWorkflowSection({
         <Reveal delay={0.1}>
           <Card className="card-featured h-full">
             <CardContent className="flex h-full flex-col justify-center p-8">
-              <i className="ti ti-quote text-[24px] text-[var(--color-text-info)]" aria-hidden="true" />
-              <p className="mt-5 font-serif text-[18px] font-normal leading-[1.5]">{dictionary.quote}</p>
+              <i className="ti ti-quote text-3xl text-[var(--accent-teal-text)]" aria-hidden="true" />
+              <p className="mt-5 text-2xl font-semibold leading-[1.4]">{dictionary.quote}</p>
             </CardContent>
           </Card>
         </Reveal>

@@ -22,7 +22,7 @@ export function Navbar({ locale, dictionary }: { locale: Locale; dictionary: Nav
     <Link
       key={id}
       href={`/${locale}#${id}`}
-      className="rounded-[var(--border-radius-md)] px-[10px] py-[6px] text-[14px] leading-[1.5] text-muted-foreground transition hover:bg-muted hover:text-foreground"
+      className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
       onClick={() => setOpen(false)}
     >
       {label}
@@ -30,10 +30,10 @@ export function Navbar({ locale, dictionary }: { locale: Locale; dictionary: Nav
   ))
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background">
-      <nav className="mx-auto flex min-h-16 max-w-[1100px] items-center justify-between px-4 sm:px-6">
+    <header className="fixed inset-x-0 top-0 z-50 border-b bg-background/75 backdrop-blur-md">
+      <nav className="mx-auto flex min-h-16 max-w-[1200px] items-center justify-between px-6">
         <Link href={`/${locale}`} className="flex items-center gap-3 font-medium">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-background-info)] text-[14px] font-medium text-[var(--color-text-info)]">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--accent-teal-bg)] text-sm font-bold text-[var(--accent-teal-text)]">
             MG
           </span>
           <span>{dictionary.name}</span>
@@ -58,7 +58,7 @@ export function Navbar({ locale, dictionary }: { locale: Locale; dictionary: Nav
       </nav>
 
       {open ? (
-        <div className="border-t bg-background p-4 lg:hidden">
+        <div className="border-t bg-background/95 p-4 backdrop-blur-md lg:hidden">
           <div className="grid gap-2">{links}</div>
           <div className="mt-4 flex gap-2">
             <LanguageSwitcher locale={locale} label={dictionary.language} />

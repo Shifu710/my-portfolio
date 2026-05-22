@@ -25,13 +25,13 @@ export function ProjectsSection({
   const projects = getProjects(locale)
 
   return (
-    <section id="projects" className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
+    <section id="projects" className="mx-auto max-w-[1200px] px-6 py-24">
       <SectionHeading
         eyebrow={dictionary.eyebrow}
         title={dictionary.title}
         description={dictionary.description}
       />
-      <div className="grid gap-4">
+      <div className="grid gap-6">
         {projects.map((project, index) => (
           <Reveal key={project.slug} delay={Math.min(index * 0.04, 0.18)}>
             <ProjectCard project={project} locale={locale} dictionary={dictionary} />

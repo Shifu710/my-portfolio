@@ -48,29 +48,29 @@ export default async function ProjectCaseStudyPage({
   ]
 
   return (
-    <main className="mx-auto w-full max-w-[1100px] px-4 py-12 sm:px-6">
+    <main className="mx-auto w-full max-w-[1200px] px-6 pb-24 pt-28">
       <Link
         href={`/${locale}#projects`}
-        className="mb-8 inline-flex items-center gap-2 rounded-[var(--border-radius-md)] text-[14px] text-muted-foreground transition hover:text-foreground"
+        className="mb-8 inline-flex items-center gap-2 rounded-full text-sm font-medium text-muted-foreground transition hover:text-foreground"
       >
         <i className="ti ti-arrow-left text-[16px]" aria-hidden="true" />
         {dictionary.projects.backToProjects}
       </Link>
 
-      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
+      <section className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px]">
         <div>
           <Badge status={project.status}>{project.statusLabel}</Badge>
-          <h1 className="mt-5 max-w-[720px] text-balance text-[22px] font-medium leading-[1.3]">
+          <h1 className="mt-5 max-w-[900px] text-balance text-4xl font-bold leading-[1.1] tracking-[-0.025em] sm:text-6xl">
             {project.title}
           </h1>
-          <p className="mt-4 max-w-[720px] text-[16px] leading-[1.7] text-muted-foreground">
+          <p className="mt-5 max-w-[760px] text-lg leading-[1.6] text-muted-foreground">
             {project.description}
           </p>
         </div>
 
         <Card className="h-fit">
           <CardContent className="space-y-4 p-5">
-            <p className="text-[13px] font-medium leading-[1.5] text-muted-foreground">{dictionary.projects.actions}</p>
+            <p className="text-sm font-medium text-muted-foreground">{dictionary.projects.actions}</p>
             <div className="grid gap-3">
               {project.links.live ? (
                 <Button asChild>
@@ -97,12 +97,12 @@ export default async function ProjectCaseStudyPage({
         </Card>
       </section>
 
-      <section className="mt-10 grid gap-4">
+      <section className="mt-14 grid gap-5">
         {sections.map(([title, content]) => (
           <Card key={title}>
             <CardContent className="p-6">
-              <h2 className="text-[18px] font-medium leading-[1.4]">{title}</h2>
-              <p className="mt-3 text-[16px] leading-[1.7] text-muted-foreground">{content}</p>
+              <h2 className="text-2xl font-semibold leading-[1.2]">{title}</h2>
+              <p className="mt-3 text-lg leading-[1.6] text-muted-foreground">{content}</p>
             </CardContent>
           </Card>
         ))}

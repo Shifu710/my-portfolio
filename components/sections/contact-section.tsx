@@ -25,18 +25,18 @@ export function ContactSection({
   ] as const
 
   return (
-    <section id="contact" className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
+    <section id="contact" className="mx-auto max-w-[1200px] px-6 py-24">
       <Reveal>
         <Card className="overflow-hidden">
-          <CardContent className="grid gap-8 p-5 md:p-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <CardContent className="grid gap-8 p-6 md:p-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
             <div>
-              <p className="text-[13px] font-normal leading-[1.5] text-muted-foreground">
+              <p className="text-sm font-medium text-[var(--accent-teal-text)]">
                 {dictionary.eyebrow}
               </p>
-              <h2 className="mt-2 text-balance text-[18px] font-medium leading-[1.4]">
+              <h2 className="mt-3 text-balance text-3xl font-semibold leading-[1.2] tracking-[-0.02em] sm:text-4xl">
                 {dictionary.title}
               </h2>
-              <p className="mt-3 text-[16px] leading-[1.7] text-muted-foreground">{dictionary.subtitle}</p>
+              <p className="mt-4 text-lg leading-[1.6] text-muted-foreground">{dictionary.subtitle}</p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Button asChild>
                   <a href={`mailto:${contact.email}`}>
@@ -56,13 +56,13 @@ export function ContactSection({
               </div>
             </div>
             <div className="grid gap-3">
-              {items.map(([label, value, icon]) => (
-                <div key={label} className="flex items-center gap-4 rounded-[var(--border-radius-lg)] border bg-[var(--color-background-secondary)] p-4">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-background-info)] text-[var(--color-text-info)]">
+              {items.map(([label, value, icon], index) => (
+                <div key={label} className="card-hover flex items-center gap-4 rounded-2xl border bg-muted p-4 transition">
+                  <span className={`flex h-11 w-11 items-center justify-center rounded-full ${['tag-teal', 'tag-purple', 'tag-green', 'tag-blue', 'tag-coral'][index]}`}>
                     <i className={`ti ${icon} text-[20px]`} aria-hidden="true" />
                   </span>
                   <div>
-                    <p className="text-[13px] leading-[1.5] text-muted-foreground">{label}</p>
+                    <p className="text-sm font-medium text-muted-foreground">{label}</p>
                     <p className="font-medium">{value}</p>
                   </div>
                 </div>

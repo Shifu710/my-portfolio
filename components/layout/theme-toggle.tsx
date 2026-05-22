@@ -16,7 +16,12 @@ export function ThemeToggle() {
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       suppressHydrationWarning
     >
-      <i className={`ti ${isDark ? 'ti-moon' : 'ti-sun'} text-[16px]`} aria-hidden="true" />
+      <i
+        className={`ti ${isDark ? 'ti-moon' : 'ti-sun'} text-base transition-transform duration-300 ${
+          isDark ? 'rotate-180' : 'rotate-0'
+        }`}
+        aria-hidden="true"
+      />
     </Button>
   )
 }

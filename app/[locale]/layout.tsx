@@ -25,7 +25,7 @@ export default async function LocaleLayout({
   const dictionary = getDictionary(locale as Locale)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <Navbar locale={locale as Locale} dictionary={dictionary.nav} />
       {children}
       <Footer locale={locale as Locale} dictionary={dictionary.footer} />
