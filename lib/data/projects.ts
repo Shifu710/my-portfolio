@@ -57,6 +57,7 @@ export function getProjects(locale: Locale): Project[] {
       visual: 'ai-crm',
       links: {
         live: 'https://supportpilot-ai-kappa.vercel.app',
+        github: 'https://github.com/Shifu710/supportpilot-ai',
       },
       caseStudy: {
         overview: isZh
