@@ -20,6 +20,7 @@ This portfolio presents Mohamed as a practical junior developer who can build mo
 - Framer Motion
 - lucide-react
 - next-themes
+- Vercel Web Analytics
 - Vercel
 
 ## Run Locally
@@ -41,6 +42,10 @@ npm run start
 ## Deploy
 
 The project is ready for Vercel. Push to the `main` branch and Vercel will deploy the production site connected to `jamiesec.dev`.
+
+## Analytics
+
+Vercel Web Analytics is installed with `@vercel/analytics` and mounted in `app/layout.tsx`, so page views are tracked across all routes after deployment. View the results in the Vercel project dashboard under Analytics.
 
 ## AI-Assisted Workflow
 
