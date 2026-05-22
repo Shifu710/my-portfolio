@@ -2,6 +2,7 @@ import type { Project } from '@/lib/data/projects'
 
 const visualLabels: Record<Project['visual'], string> = {
   'ai-crm': 'AI CRM',
+  credits: 'Credits',
   wechat: 'WeChat',
   resume: 'AI Match',
   portfolio: 'Portfolio',

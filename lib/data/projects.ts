@@ -11,7 +11,7 @@ export type Project = {
   businessValue: string
   features: string[]
   tech: string[]
-  visual: 'ai-crm' | 'wechat' | 'resume' | 'portfolio' | 'weather' | 'taskflow' | 'commerce'
+  visual: 'ai-crm' | 'credits' | 'wechat' | 'resume' | 'portfolio' | 'weather' | 'taskflow' | 'commerce'
   links: {
     live?: string
     github?: string
@@ -39,6 +39,42 @@ export function getProjects(locale: Locale): Project[] {
   const isZh = locale === 'zh'
 
   return [
+    {
+      slug: 'ai-workstation-credits-mvp',
+      title: 'AI Workstation Credits MVP',
+      status: 'Live',
+      statusLabel: isZh ? 'Live' : 'Live',
+      description: isZh
+        ? 'A full-stack AI SaaS billing-loop demo with auth, user credits, backend-only AI calls, usage logs, admin recharge, and secure role checks.'
+        : 'A full-stack AI SaaS billing-loop demo with auth, user credits, backend-only AI calls, usage logs, admin recharge, and secure role checks.',
+      businessValue: isZh
+        ? 'Shows senior-review-ready product thinking: failed AI calls do not deduct credits, successful calls deduct atomically, and admins can recharge users safely.'
+        : 'Shows senior-review-ready product thinking: failed AI calls do not deduct credits, successful calls deduct atomically, and admins can recharge users safely.',
+      features: [
+        'Supabase auth',
+        '1000 default credits',
+        'Backend AI route',
+        'Atomic credit spend',
+        'Usage logs',
+        'Admin recharge',
+        'RLS security',
+        'Vercel deployment',
+      ],
+      tech: ['Next.js App Router', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL RLS', 'OpenAI SDK', 'DeepSeek API', 'Zod', 'Vercel'],
+      visual: 'credits',
+      links: {
+        live: 'https://ai-workstation-credits-mvp.vercel.app',
+      },
+      caseStudy: {
+        overview: 'This MVP demonstrates the core business loop behind a real AI SaaS product rather than only a chat UI.',
+        problem: 'AI SaaS products need to protect provider keys, control credit balances, avoid charging failed requests, and keep a reliable audit trail.',
+        solution: 'The app routes all AI calls through a backend API, checks balance before provider calls, deducts credits only after a successful response, logs every completed attempt, and gives admins a protected recharge workflow.',
+        architecture: 'Next.js App Router handles pages and route handlers. Supabase Auth manages users. PostgreSQL tables store profiles, usage logs, and immutable credit transactions. Service-role APIs perform trusted cross-user operations.',
+        aiWorkflow: 'The AI provider is called only from the server through the OpenAI-compatible SDK. DeepSeek is configured by environment variables, so the provider can be changed without application code changes.',
+        learning: 'The key learning was designing the secure billing boundary: RLS for user reads, service-role APIs for trusted writes, database functions for concurrency-safe credit changes, and clear documentation for technical review.',
+        screenshots: 'Available through the live demo.',
+      },
+    },
     {
       slug: 'ai-customer-support-crm',
       title: isZh ? 'SupportPilot AI 客服智舱' : 'SupportPilot AI',
