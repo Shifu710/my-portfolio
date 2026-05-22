@@ -1,14 +1,12 @@
 import type { Project } from '@/types/portfolio'
 import taskflowPreview from '@/assets/taskflow-dashboard.png'
 
-const demoUrl = 'https://example.com'
-
 export const projects: Project[] = [
   {
     id: 1,
     title: 'Weather App',
     description:
-      'A modern responsive weather application built using Vue 3 and TypeScript. The app provides realtime weather data, hourly forecast, and 5-day forecast using WeatherAPI integration.',
+      'A responsive weather dashboard that integrates WeatherAPI data, handles loading and error states, and keeps recent city searches in localStorage.',
     imageLabel: 'Weather',
     imageVariant: 'weather',
     technologies: [
@@ -29,7 +27,7 @@ export const projects: Project[] = [
     id: 2,
     title: 'TaskFlow Manager',
     description:
-      'A professional todo and task manager built with Vue 3 and TypeScript. It includes a dashboard, task boards, drag-and-drop reordering, filters, dark mode, charts, and persistent localStorage data.',
+      'A task management dashboard with draggable boards, task filters, dark mode, charts, and persistent localStorage data.',
     imageLabel: 'TaskFlow',
     imageSrc: taskflowPreview,
     technologies: [
@@ -50,7 +48,7 @@ export const projects: Project[] = [
     id: 3,
     title: 'E-Commerce Storefront',
     description:
-      'A professional responsive e-commerce storefront built with Vue 3 and TypeScript. It includes product browsing from FakeStoreAPI, search, filters, product details, cart, wishlist, coupon flow, dark mode, and mobile navigation.',
+      'A responsive storefront that uses FakeStoreAPI for product data and includes search, filters, product details, cart, wishlist, coupon flow, and mobile navigation.',
     imageLabel: 'Shop UI',
     imageVariant: 'commerce',
     technologies: [
@@ -64,67 +62,6 @@ export const projects: Project[] = [
       'Vant UI',
       'Tailwind CSS',
     ],
-    liveUrl: 'PASTE_YOUR_ECOMMERCE_LIVE_DEMO_LINK_HERE',
-    githubUrl: 'PASTE_YOUR_ECOMMERCE_GITHUB_REPOSITORY_LINK_HERE',
-  },
-  {
-    id: 4,
-    title: 'Landing Page Website',
-    description:
-      'A clean marketing landing page focused on responsive layout, strong typography, and conversion-friendly sections.',
-    imageLabel: 'Landing',
-    technologies: ['Vue 3', 'TypeScript', 'CSS3'],
-    liveUrl: demoUrl,
-    githubUrl: demoUrl,
-  },
-  {
-    id: 5,
-    title: 'Business Website',
-    description:
-      'A professional multi-section website concept for a local business with service cards and contact areas.',
-    imageLabel: 'Business',
-    technologies: ['Vue Router', 'Element Plus', 'CSS Grid'],
-    liveUrl: demoUrl,
-    githubUrl: demoUrl,
-  },
-  {
-    id: 6,
-    title: 'Product Page',
-    description:
-      'A product detail interface with feature highlights, pricing information, and reusable UI sections.',
-    imageLabel: 'Product',
-    technologies: ['Vue 3', 'Pinia', 'CSS Variables'],
-    liveUrl: demoUrl,
-    githubUrl: demoUrl,
-  },
-  {
-    id: 7,
-    title: 'Admin Dashboard',
-    description:
-      'A dashboard layout concept with cards, metrics, responsive grids, and a clean management UI style.',
-    imageLabel: 'Dashboard',
-    technologies: ['Element Plus', 'TypeScript', 'Vite'],
-    liveUrl: demoUrl,
-    githubUrl: demoUrl,
-  },
-  {
-    id: 8,
-    title: 'Login UI',
-    description:
-      'A polished authentication screen with form validation-ready structure and professional spacing.',
-    imageLabel: 'Login',
-    technologies: ['HTML5', 'CSS3', 'Vue Forms'],
-    liveUrl: demoUrl,
-    githubUrl: demoUrl,
-  },
-  {
-    id: 9,
-    title: 'Mobile Responsive Website',
-    description:
-      'A mobile-first website concept that adapts smoothly from small screens to full desktop layouts.',
-    imageLabel: 'Mobile',
-    technologies: ['Responsive Design', 'Vue 3', 'CSS3'],
-    liveUrl: demoUrl,
-    githubUrl: demoUrl,
+    githubUrl: 'https://github.com/Shifu710/e-commerce-product-page',
   },
 ]

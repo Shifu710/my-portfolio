@@ -12,7 +12,7 @@ export interface Project {
   imageSrc?: string
   imageVariant?: 'weather' | 'commerce'
   technologies: string[]
-  liveUrl: string
+  liveUrl?: string
   githubUrl: string
 }
 

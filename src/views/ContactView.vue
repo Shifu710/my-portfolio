@@ -5,22 +5,18 @@
         level="h1"
         eyebrow="Contact"
         title="Let's connect"
-        description="Use the form for a quick message, or update the links below with real profiles when you are ready to publish."
+        description="Reach me by email or review the code behind my portfolio projects on GitHub."
       />
 
       <div class="contact-grid">
         <div class="contact-panel">
-          <a href="mailto:mohamed.gamal@example.com">
+          <a href="mailto:25082906@student.unimy.edu.my">
             <span>Email</span>
-            mohamed.gamal@example.com
+            25082906@student.unimy.edu.my
           </a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Shifu710" target="_blank" rel="noreferrer">
             <span>GitHub</span>
-            github.com/mohamed-gamal
-          </a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
-            linkedin.com/in/mohamed-gamal
+            github.com/Shifu710
           </a>
         </div>
 

@@ -6,8 +6,8 @@
         <h1>Hi, I'm Mohamed Gamal</h1>
         <p class="hero-subtitle">Frontend Developer | Vue 3 | TypeScript</p>
         <p class="hero-description">
-          I am currently studying Computer Science and building practical frontend projects using
-          Vue 3, TypeScript, and modern web technologies.
+          I am a Computer Science student building practical frontend applications with Vue 3,
+          TypeScript, responsive UI patterns, and clean component architecture.
         </p>
 
         <div class="hero-actions">
@@ -25,7 +25,7 @@
           <p>Vue 3, TypeScript, responsive UI, clean architecture, and practical learning.</p>
           <div class="profile-stats">
             <span><strong>13</strong> Skills</span>
-            <span><strong>6</strong> Projects</span>
+            <span><strong>3</strong> Projects</span>
             <span><strong>4</strong> Routes</span>
           </div>
         </div>

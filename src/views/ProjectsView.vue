@@ -4,8 +4,8 @@
       <SectionHeader
         level="h1"
         eyebrow="Projects"
-        title="Frontend projects ready for real case studies"
-        description="Replace these polished placeholders with live work as projects are completed. The reusable card structure keeps the page easy to maintain."
+        title="Frontend projects with working product flows"
+        description="A focused set of Vue and TypeScript projects that demonstrate API integration, state management, responsive layouts, and practical UI architecture."
       />
 
       <div class="projects-grid">

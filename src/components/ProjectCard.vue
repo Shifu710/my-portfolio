@@ -28,7 +28,14 @@
       </div>
 
       <div class="project-actions">
-        <el-button tag="a" :href="project.liveUrl" target="_blank" rel="noreferrer" type="primary">
+        <el-button
+          v-if="project.liveUrl"
+          tag="a"
+          :href="project.liveUrl"
+          target="_blank"
+          rel="noreferrer"
+          type="primary"
+        >
           Live Demo
         </el-button>
         <el-button tag="a" :href="project.githubUrl" target="_blank" rel="noreferrer">

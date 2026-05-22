@@ -1,71 +1,59 @@
 # Mohamed Gamal Portfolio
 
-A modern personal portfolio website for Mohamed Gamal, built to showcase frontend projects, technical skills, and a clean Vue 3 application architecture suitable for junior frontend developer job applications.
+Personal portfolio for Mohamed Gamal, a Computer Science student focused on frontend development with Vue 3, TypeScript, responsive UI, and clean component architecture.
+
+## Highlights
+
+- Responsive portfolio with Home, About, Projects, and Contact routes
+- Focused project section with real GitHub links and live demos where available
+- Dark/light theme persisted with Pinia and localStorage
+- Reusable components for navigation, section headers, skills, project cards, and timeline items
+- Vercel SPA rewrite configuration for direct route refresh support
 
 ## Tech Stack
 
 - Vue 3
 - TypeScript
 - Vite
-- Vue Router 4
+- Vue Router
 - Pinia
-- Axios
 - Element Plus
-- HTML5
-- CSS3
+- Axios
 - ESLint
 - Prettier
-- Git
 
-## Features
-
-- Responsive desktop, tablet, and mobile layout
-- Reusable components for navigation, sections, skills, and projects
-- Dark/light theme toggle persisted with Pinia and localStorage
-- Element Plus cards, forms, buttons, and notifications
-- Smooth scrolling, clean transitions, and professional styling
-- Placeholder projects ready to replace with real portfolio work
-
-## Installation
+## Getting Started
 
 ```bash
 npm install
-```
-
-## Development
-
-```bash
 npm run dev
 ```
 
-## Build
+## Production Build
 
 ```bash
 npm run build
-```
-
-## Lint and Format
-
-```bash
-npm run lint
-npm run format
+npm run preview
 ```
 
 ## Project Structure
 
 ```text
 src/
-├── api/
-├── assets/
-├── components/
-├── composables/
-├── layouts/
-├── router/
-├── stores/
-├── styles/
-├── types/
-├── utils/
-├── views/
-├── App.vue
-└── main.ts
+  assets/
+  components/
+  composables/
+  data/
+  layouts/
+  router/
+  stores/
+  styles/
+  types/
+  views/
 ```
+
+## Portfolio Projects
+
+- Weather App: Vue weather dashboard with API integration and recent searches
+- TaskFlow Manager: Task dashboard with boards, filters, charts, and persistent storage
+- E-Commerce Storefront: Product browsing, cart, wishlist, filtering, and mobile navigation
