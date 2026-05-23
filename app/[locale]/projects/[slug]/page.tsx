@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+import { ProjectMockup } from '@/components/cards/project-mockup'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -48,7 +49,7 @@ export default async function ProjectCaseStudyPage({
   ]
 
   return (
-    <main className="mx-auto w-full max-w-[1100px] px-6 pb-16 pt-10">
+    <main className="mx-auto w-full max-w-[1180px] px-6 pb-16 pt-10">
       <Link
         href={`/${locale}#projects`}
         className="mb-8 inline-flex items-center gap-2 rounded-md text-sm font-normal text-muted-foreground transition-colors duration-150 hover:text-foreground"
@@ -57,44 +58,72 @@ export default async function ProjectCaseStudyPage({
         {dictionary.projects.backToProjects}
       </Link>
 
-      <section className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
-        <div>
+      <section className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+        <ProjectMockup visual={project.visual} image={project.image} title={project.title} />
+
+        <div className="flex flex-col">
           <Badge status={project.status}>{project.statusLabel}</Badge>
-          <h1 className="mt-4 max-w-[720px] text-balance text-[22px] font-medium leading-[1.3]">
+          <h1 className="mt-4 max-w-[720px] text-balance text-[24px] font-medium leading-[1.3]">
             {project.title}
           </h1>
           <p className="mt-4 max-w-[720px] leading-[1.7] text-muted-foreground">
             {project.description}
           </p>
-        </div>
 
-        <Card className="card-featured h-fit">
-          <CardContent className="space-y-4 p-5">
-            <p className="text-[13px] font-normal leading-[1.5] text-muted-foreground">{dictionary.projects.actions}</p>
-            <div className="grid gap-3">
-              {project.links.live ? (
-                <Button asChild>
-                  <a href={project.links.live} target="_blank" rel="noreferrer">
-                    live demo ↗
-                  </a>
-                </Button>
-              ) : (
-                <Button disabled>live demo coming soon</Button>
-              )}
-              {project.links.github ? (
-                <Button asChild variant="secondary">
-                  <a href={project.links.github} target="_blank" rel="noreferrer">
-                    github ↗
-                  </a>
-                </Button>
-              ) : (
-                <Button disabled variant="secondary">
-                  github coming soon
-                </Button>
-              )}
+          <div className="mt-5 rounded-lg border bg-muted p-4">
+            <p className="text-sm font-medium leading-[1.5] text-foreground">
+              {dictionary.projects.businessValue}
+            </p>
+            <p className="mt-2 leading-[1.7] text-muted-foreground">{project.businessValue}</p>
+          </div>
+
+          <div className="mt-5">
+            <p className="text-sm font-medium leading-[1.5]">{dictionary.projects.keyFeatures}</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {project.features.slice(0, 7).map((feature) => (
+                <span key={feature} className="badge badge-neutral">
+                  {feature}
+                </span>
+              ))}
             </div>
-          </CardContent>
-        </Card>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tech.slice(0, 8).map((tech, index) => (
+              <span
+                key={tech}
+                className={`tag ${['tag-purple', 'tag-teal', 'tag-blue', 'tag-coral', 'tag-green', 'tag-amber'][index % 6]}`}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {project.links.live ? (
+              <Button asChild>
+                <a href={project.links.live} target="_blank" rel="noreferrer">
+                  {dictionary.projects.liveDemo}
+                  <i className="ti ti-external-link text-[16px]" aria-hidden="true" />
+                </a>
+              </Button>
+            ) : (
+              <Button disabled>{dictionary.projects.comingSoon}</Button>
+            )}
+            {project.links.github ? (
+              <Button asChild variant="secondary">
+                <a href={project.links.github} target="_blank" rel="noreferrer">
+                  {dictionary.projects.github}
+                  <i className="ti ti-brand-github text-[16px]" aria-hidden="true" />
+                </a>
+              </Button>
+            ) : (
+              <Button disabled variant="secondary">
+                {dictionary.projects.comingSoon}
+              </Button>
+            )}
+          </div>
+        </div>
       </section>
 
       <section className="mt-10 grid gap-5">

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import type { Project } from '@/lib/data/projects'
 
 const visualLabels: Record<Project['visual'], string> = {
@@ -11,7 +13,29 @@ const visualLabels: Record<Project['visual'], string> = {
   commerce: 'Market',
 }
 
-export function ProjectMockup({ visual }: { visual: Project['visual'] }) {
+export function ProjectMockup({
+  visual,
+  image,
+  title,
+}: {
+  visual: Project['visual']
+  image?: Project['image']
+  title?: string
+}) {
+  if (image) {
+    return (
+      <figure className="relative aspect-[4/3] overflow-hidden rounded-lg border bg-muted">
+        <Image
+          src={image.src}
+          alt={image.alt || title || visualLabels[visual]}
+          fill
+          sizes="(min-width: 1024px) 45vw, 100vw"
+          className="object-cover object-top"
+        />
+      </figure>
+    )
+  }
+
   return (
     <div className="min-h-48 overflow-hidden rounded-lg border bg-muted p-4">
       <div className="flex items-center justify-between">

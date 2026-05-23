@@ -12,6 +12,10 @@ export type Project = {
   features: string[]
   tech: string[]
   visual: 'ai-crm' | 'credits' | 'wechat' | 'resume' | 'portfolio' | 'weather' | 'taskflow' | 'commerce'
+  image?: {
+    src: string
+    alt: string
+  }
   links: {
     live?: string
     github?: string
@@ -62,8 +66,13 @@ export function getProjects(locale: Locale): Project[] {
       ],
       tech: ['Next.js App Router', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL RLS', 'OpenAI SDK', 'DeepSeek API', 'Zod', 'Vercel'],
       visual: 'credits',
+      image: {
+        src: '/project-previews/ai-workstation-credits-mvp.png',
+        alt: 'AI Workstation Credits MVP live app screenshot',
+      },
       links: {
         live: 'https://ai-workstation-credits-mvp.vercel.app',
+        github: 'https://github.com/Shifu710/ai-workstation-credits-mvp',
       },
       caseStudy: {
         overview: 'This MVP demonstrates the core business loop behind a real AI SaaS product rather than only a chat UI.',
@@ -91,6 +100,10 @@ export function getProjects(locale: Locale): Project[] {
         : ['Demo login', 'Customer CRM', 'Three-column inbox', 'AI reply suggestions', 'Knowledge base', 'Analytics charts', 'Templates', 'Settings', 'Chinese/English UI'],
       tech: ['Next.js', 'React', 'TypeScript', 'Ant Design', 'Tailwind CSS', 'Supabase', 'Prisma', 'Vercel AI SDK', 'DeepSeek/Qwen API', 'TanStack Query', 'Zustand'],
       visual: 'ai-crm',
+      image: {
+        src: '/project-previews/supportpilot-ai.png',
+        alt: 'SupportPilot AI live app screenshot',
+      },
       links: {
         live: 'https://supportpilot-ai-kappa.vercel.app',
         github: 'https://github.com/Shifu710/supportpilot-ai',
@@ -133,6 +146,10 @@ export function getProjects(locale: Locale): Project[] {
         : ['H5 mini-program preview', 'Product/service catalog', 'Booking/order flows', 'Demo login', 'Admin dashboard', 'Customer management', 'Promotions', 'Analytics', 'Payment simulation'],
       tech: ['Next.js', 'React', 'TypeScript', 'Ant Design', 'Tailwind CSS', 'Prisma', 'Supabase-ready schema', 'Taro React scaffold', 'Vercel'],
       visual: 'wechat',
+      image: {
+        src: '/project-previews/minishop-pro.png',
+        alt: 'MiniShop Pro live app screenshot',
+      },
       links: {
         live: 'https://minishop-pro.vercel.app',
         github: 'https://github.com/Shifu710/minishop-pro',
@@ -190,6 +207,10 @@ export function getProjects(locale: Locale): Project[] {
         : ['Bilingual English/Chinese content', 'Responsive design', 'Dark/light mode', 'Project case studies', 'Smooth animations', 'SEO optimization', 'Fast performance'],
       tech: baseTech.portfolio,
       visual: 'portfolio',
+      image: {
+        src: '/project-previews/portfolio-website.png',
+        alt: 'Portfolio website screenshot',
+      },
       links: {
         live: 'https://jamiesec.dev',
         github: 'https://github.com/Shifu710/my-portfolio',
@@ -216,6 +237,10 @@ export function getProjects(locale: Locale): Project[] {
       features: isZh ? ['城市搜索', '天气详情', '小时预报', '5 天预报', '近期搜索', '深浅色模式'] : ['City search', 'Weather details', 'Hourly forecast', '5-day forecast', 'Recent searches', 'Dark/light mode'],
       tech: baseTech.weather,
       visual: 'weather',
+      image: {
+        src: '/project-previews/vue-weather-dashboard.png',
+        alt: 'Vue Weather Dashboard live app screenshot',
+      },
       links: {
         live: 'https://vue-weather-app-pied.vercel.app/',
         github: 'https://github.com/Shifu710/vue-weather-app',
@@ -242,6 +267,10 @@ export function getProjects(locale: Locale): Project[] {
       features: isZh ? ['任务看板', '拖拽排序', '筛选搜索', '数据图表', '本地存储', '深色模式'] : ['Task boards', 'Drag sorting', 'Search filters', 'Charts', 'Local storage', 'Dark mode'],
       tech: baseTech.taskflow,
       visual: 'taskflow',
+      image: {
+        src: '/project-previews/taskflow-manager.png',
+        alt: 'TaskFlow Manager live app screenshot',
+      },
       links: {
         live: 'https://todo-task-manager-gilt.vercel.app/',
         github: 'https://github.com/Shifu710/todo-task-manager',
@@ -268,6 +297,10 @@ export function getProjects(locale: Locale): Project[] {
       features: isZh ? ['商品列表', '分类筛选', '详情页', '购物车', '收藏', '优惠码', '移动导航'] : ['Product listing', 'Category filters', 'Detail pages', 'Cart', 'Wishlist', 'Coupon flow', 'Mobile navigation'],
       tech: baseTech.commerce,
       visual: 'commerce',
+      image: {
+        src: '/project-previews/meridian-market.png',
+        alt: 'Meridian Market live app screenshot',
+      },
       links: {
         live: 'https://e-commerce-product-page-nu-seven.vercel.app/',
         github: 'https://github.com/Shifu710/e-commerce-product-page',

@@ -27,7 +27,7 @@ export function ProjectCard({
   return (
     <Card className="overflow-hidden">
       <CardContent className="grid gap-5 p-5 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-        <ProjectMockup visual={project.visual} />
+        <ProjectMockup visual={project.visual} image={project.image} title={project.title} />
         <div className="flex flex-col">
           <Badge status={project.status}>{project.statusLabel}</Badge>
           <h3 className="mt-3 text-[16px] font-medium leading-[1.5]">{project.title}</h3>
@@ -48,7 +48,10 @@ export function ProjectCard({
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
             {project.tech.slice(0, 6).map((tech, index) => (
-              <span key={tech} className={`tag ${['tag-purple', 'tag-teal', 'tag-blue', 'tag-coral', 'tag-green', 'tag-amber'][index % 6]}`}>
+              <span
+                key={tech}
+                className={`tag ${['tag-purple', 'tag-teal', 'tag-blue', 'tag-coral', 'tag-green', 'tag-amber'][index % 6]}`}
+              >
                 {tech}
               </span>
             ))}
@@ -57,7 +60,8 @@ export function ProjectCard({
             {project.links.live ? (
               <Button asChild size="sm">
                 <a href={project.links.live} target="_blank" rel="noreferrer">
-                  {dictionary.liveDemo} ↗
+                  {dictionary.liveDemo}
+                  <i className="ti ti-external-link text-[14px]" aria-hidden="true" />
                 </a>
               </Button>
             ) : (
@@ -68,7 +72,8 @@ export function ProjectCard({
             {project.links.github ? (
               <Button asChild variant="secondary" size="sm">
                 <a href={project.links.github} target="_blank" rel="noreferrer">
-                  {dictionary.github} ↗
+                  {dictionary.github}
+                  <i className="ti ti-brand-github text-[14px]" aria-hidden="true" />
                 </a>
               </Button>
             ) : (
@@ -79,7 +84,8 @@ export function ProjectCard({
             {project.links.gitee ? (
               <Button asChild variant="secondary" size="sm">
                 <a href={project.links.gitee} target="_blank" rel="noreferrer">
-                  {dictionary.gitee} ↗
+                  {dictionary.gitee}
+                  <i className="ti ti-external-link text-[14px]" aria-hidden="true" />
                 </a>
               </Button>
             ) : null}
