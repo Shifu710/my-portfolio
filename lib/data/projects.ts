@@ -165,30 +165,37 @@ export function getProjects(locale: Locale): Project[] {
       },
     },
     {
-      slug: 'ai-resume-job-matching',
-      title: isZh ? 'AI 简历 / 岗位匹配平台' : 'AI Resume / Job Matching Platform',
-      status: 'Planned',
-      statusLabel: isZh ? '计划中' : 'Planned',
+      slug: 'jobfit-ai',
+      title: 'JobFit AI',
+      status: 'Live',
+      statusLabel: isZh ? '已上线' : 'Live',
       description: isZh
-        ? '帮助用户对比简历和岗位描述，生成匹配分数、技能差距和中英文优化建议。'
-        : 'An AI-powered platform that helps users compare resumes with job descriptions, generate match scores, detect skill gaps, and receive improvement suggestions in English and Chinese.',
+        ? '一个 AI 求职匹配和简历优化工具，可对比简历与岗位描述，生成匹配分数、技能差距、简历改写建议和面试问题。'
+        : 'An AI resume matching and career-improvement assistant that compares resumes with job descriptions, scores fit, finds gaps, rewrites bullets, and prepares interview questions.',
       businessValue: isZh
-        ? '适合学生、求职者、HR 和招聘流程，提高求职材料优化效率。'
-        : 'Useful for students, job seekers, HR teams, and recruitment workflows.',
+        ? '展示了完整的产品思维：公开落地页、登录入口、仪表盘、分析流程、分享结果、隐私提示、OpenAI 服务端调用和无密钥演示 fallback。'
+        : 'Shows complete product thinking: landing page, auth-style entry, dashboard workflow, shareable result, privacy guardrails, server-side OpenAI calls, and demo fallback when no API key is configured.',
       features: isZh
-        ? ['简历上传', '岗位描述输入', 'AI 匹配分数', '技能差距分析', '优化建议', '历史记录', '双语输出']
-        : ['Resume upload', 'Job description input', 'AI match score', 'Skill gap analysis', 'Improvement suggestions', 'Saved history', 'Bilingual output'],
-      tech: ['Next.js', 'React', 'TypeScript', 'shadcn/ui', 'Supabase', 'Vercel AI SDK', 'DeepSeek/Qwen API', 'React Hook Form', 'Zod'],
+        ? ['简历/JD 匹配评分', '技能差距分析', '简历要点改写', '面试题生成', '关键词提取', '双语界面', '分享结果页', 'Mock 演示模式']
+        : ['Resume/JD match scoring', 'Skill gap analysis', 'Resume bullet rewrites', 'Interview question prep', 'Keyword extraction', 'Bilingual UI', 'Shareable results', 'Mock demo mode'],
+      tech: ['Next.js 16 App Router', 'React 19', 'TypeScript', 'Tailwind CSS', 'OpenAI SDK', 'Zod', 'Prisma schema', 'Vercel'],
       visual: 'resume',
-      links: {},
+      image: {
+        src: '/project-previews/jobfit-ai.png',
+        alt: 'JobFit AI live analyzer screenshot',
+      },
+      links: {
+        live: 'https://jobfit-ai-gamma.vercel.app',
+        github: 'https://github.com/Shifu710/jobfit-ai',
+      },
       caseStudy: {
-        overview: isZh ? '这是一个计划中的 AI 产品型项目。' : 'This is a planned AI product-style project.',
-        problem: isZh ? '求职者很难快速判断自己的简历是否匹配岗位。' : 'Job seekers struggle to quickly judge whether their resume matches a role.',
-        solution: isZh ? '让 AI 对比简历和 JD，输出分数、差距和改进建议。' : 'Let AI compare the resume and job description, then return a score, gaps, and improvement suggestions.',
-        architecture: isZh ? 'Next.js 处理页面和 Server Actions，数据库保存分析历史，AI SDK 统一模型调用。' : 'Next.js handles UI and Server Actions, the database stores analysis history, and the AI SDK standardizes model calls.',
-        aiWorkflow: isZh ? 'AI 用于提示词设计、结果结构化、双语输出和边界案例检查。' : 'AI helps with prompt design, structured output, bilingual responses, and edge-case testing.',
-        learning: isZh ? '重点学习 AI 结果可信度、表单验证和用户隐私。' : 'The main learning goals are AI reliability, form validation, and user privacy.',
-        screenshots: isZh ? '产品界面将在开发后加入。' : 'Product screens will be added after development.',
+        overview: isZh ? 'JobFit AI 是根据产品 brief 做出的完整 MVP，用来展示 AI 求职工具从需求到可部署产品的实现能力。' : 'JobFit AI is a complete MVP built from a product brief to show how an AI career tool can move from requirements to a deployable product.',
+        problem: isZh ? '求职者很难快速判断简历是否匹配目标岗位，也容易收到泛泛而谈、不可验证的 AI 建议。' : 'Job seekers struggle to quickly judge whether a resume fits a role, and generic AI advice can be hard to verify or apply safely.',
+        solution: isZh ? '产品用四步分析流程输出匹配分数、差距、改写建议、关键词和面试问题，并把隐私提示和诚实改写原则放进核心体验。' : 'The product uses a four-step analysis flow to return scores, gaps, rewrites, keywords, and interview prep while keeping privacy notices and honest rewrite rules in the core experience.',
+        architecture: isZh ? 'Next.js App Router 负责公开页面、仪表盘和 API route。AI 调用只在服务端进行，Zod 校验输入，Prisma schema 为后续数据库阶段预留结构。' : 'Next.js App Router handles public pages, dashboard screens, and API routes. AI calls run only on the server, Zod validates inputs, and the Prisma schema prepares the next database phase.',
+        aiWorkflow: isZh ? '默认使用 OpenAI 兼容 SDK 和服务端环境变量；没有配置 API key 时，生产演示会返回结构化 mock 分析，避免在线 demo 失效。' : 'The app uses the OpenAI-compatible SDK with server-side environment variables; when no API key is configured, the production demo returns structured mock analysis so the live demo stays usable.',
+        learning: isZh ? '重点学习把 AI 能力放入真实产品边界：输入校验、结构化输出、隐私提示、可分享结果、fallback 策略和上线验证。' : 'The main learning was placing AI inside real product boundaries: validation, structured output, privacy guidance, shareable results, fallback strategy, and deployment verification.',
+        screenshots: isZh ? '作品集卡片使用了线上分析页的真实截图。' : 'The portfolio card uses a real screenshot from the live analyzer page.',
       },
     },
     {
