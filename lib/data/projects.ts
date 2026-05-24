@@ -49,13 +49,15 @@ export function getProjects(locale: Locale): Project[] {
       status: 'Live',
       statusLabel: isZh ? 'Live' : 'Live',
       description: isZh
-        ? 'Enterprise RAG SaaS platform for secure document intelligence, with document upload, hybrid retrieval, citations, tenant isolation, credits, usage logs, and technical review flow.'
-        : 'Enterprise RAG SaaS platform for secure document intelligence, with document upload, hybrid retrieval, citations, tenant isolation, credits, usage logs, and technical review flow.',
+        ? 'Enterprise RAG SaaS platform for secure document intelligence, with a public product page, one-click guest demo, document upload, retrieval, citations, tenant isolation, credits, usage logs, and technical review flow.'
+        : 'Enterprise RAG SaaS platform for secure document intelligence, with a public product page, one-click guest demo, document upload, retrieval, citations, tenant isolation, credits, usage logs, and technical review flow.',
       businessValue: isZh
         ? 'Shows an AI-native SaaS product beyond a chatbot: workspace RBAC, document processing, RAG answers with sources, billing discipline, and recruiter-friendly guest demo access.'
         : 'Shows an AI-native SaaS product beyond a chatbot: workspace RBAC, document processing, RAG answers with sources, billing discipline, and recruiter-friendly guest demo access.',
       features: [
+        'Public product landing page',
         'Guest demo login',
+        'Read-only reviewer mode',
         'Multi-tenant workspace RBAC',
         'PDF/DOCX/TXT/MD upload',
         'Celery document indexing',
@@ -65,6 +67,7 @@ export function getProjects(locale: Locale): Project[] {
         'Retrieval Debug Panel',
         'Atomic credit billing',
         'Usage logs',
+        'Expanded technical review page',
       ],
       tech: ['Next.js App Router', 'TypeScript', 'FastAPI', 'SQLAlchemy', 'PostgreSQL/pgvector', 'Redis/Celery', 'LangGraph', 'DeepSeek/Qwen-ready', 'Docker', 'Vercel'],
       visual: 'smartdocs',
@@ -74,14 +77,14 @@ export function getProjects(locale: Locale): Project[] {
       },
       caseStudy: {
         overview: isZh
-          ? 'SmartDocs AI is the flagship enterprise RAG SaaS project, built to demonstrate a complete document intelligence workflow from guest demo to citations, credits, and usage logs.'
-          : 'SmartDocs AI is the flagship enterprise RAG SaaS project, built to demonstrate a complete document intelligence workflow from guest demo to citations, credits, and usage logs.',
+          ? 'SmartDocs AI is the flagship enterprise RAG SaaS project, built to demonstrate a complete document intelligence workflow from landing page to guest demo, citations, credits, usage logs, and technical review.'
+          : 'SmartDocs AI is the flagship enterprise RAG SaaS project, built to demonstrate a complete document intelligence workflow from landing page to guest demo, citations, credits, usage logs, and technical review.',
         problem: isZh
           ? 'Enterprise AI demos often stop at a chatbot and do not show tenant isolation, document processing, observability, billing, or source-grounded answers.'
           : 'Enterprise AI demos often stop at a chatbot and do not show tenant isolation, document processing, observability, billing, or source-grounded answers.',
         solution: isZh
-          ? 'Build a production-style SaaS flow with workspace auth, document upload, indexing, hybrid retrieval, streamed answers, source citations, debug visibility, and credit-safe usage logging.'
-          : 'Build a production-style SaaS flow with workspace auth, document upload, indexing, hybrid retrieval, streamed answers, source citations, debug visibility, and credit-safe usage logging.',
+          ? 'Build a production-style SaaS flow with a real public entry point, one-click guest routing, workspace auth, document upload, indexing, retrieval, streamed answers, source citations, debug visibility, and credit-safe usage logging.'
+          : 'Build a production-style SaaS flow with a real public entry point, one-click guest routing, workspace auth, document upload, indexing, retrieval, streamed answers, source citations, debug visibility, and credit-safe usage logging.',
         architecture: isZh
           ? 'Next.js handles the app UI, FastAPI exposes layered routers and services, PostgreSQL/pgvector stores workspaces and chunks, Redis/Celery processes documents, and the RAG service streams answer events.'
           : 'Next.js handles the app UI, FastAPI exposes layered routers and services, PostgreSQL/pgvector stores workspaces and chunks, Redis/Celery processes documents, and the RAG service streams answer events.',
