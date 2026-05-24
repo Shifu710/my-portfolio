@@ -3,6 +3,7 @@ import Image from 'next/image'
 import type { Project } from '@/lib/data/projects'
 
 const visualLabels: Record<Project['visual'], string> = {
+  smartdocs: 'RAG SaaS',
   'ai-crm': 'AI CRM',
   credits: 'Credits',
   wechat: 'WeChat',

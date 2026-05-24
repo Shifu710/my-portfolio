@@ -11,7 +11,7 @@ export type Project = {
   businessValue: string
   features: string[]
   tech: string[]
-  visual: 'ai-crm' | 'credits' | 'wechat' | 'resume' | 'portfolio' | 'weather' | 'taskflow' | 'commerce'
+  visual: 'smartdocs' | 'ai-crm' | 'credits' | 'wechat' | 'resume' | 'portfolio' | 'weather' | 'taskflow' | 'commerce'
   image?: {
     src: string
     alt: string
@@ -43,6 +43,57 @@ export function getProjects(locale: Locale): Project[] {
   const isZh = locale === 'zh'
 
   return [
+    {
+      slug: 'smartdocs-ai',
+      title: 'SmartDocs AI',
+      status: 'Live',
+      statusLabel: isZh ? 'Live' : 'Live',
+      description: isZh
+        ? 'Enterprise RAG SaaS platform for secure document intelligence, with document upload, hybrid retrieval, citations, tenant isolation, credits, usage logs, and technical review flow.'
+        : 'Enterprise RAG SaaS platform for secure document intelligence, with document upload, hybrid retrieval, citations, tenant isolation, credits, usage logs, and technical review flow.',
+      businessValue: isZh
+        ? 'Shows an AI-native SaaS product beyond a chatbot: workspace RBAC, document processing, RAG answers with sources, billing discipline, and recruiter-friendly guest demo access.'
+        : 'Shows an AI-native SaaS product beyond a chatbot: workspace RBAC, document processing, RAG answers with sources, billing discipline, and recruiter-friendly guest demo access.',
+      features: [
+        'Guest demo login',
+        'Multi-tenant workspace RBAC',
+        'PDF/DOCX/TXT/MD upload',
+        'Celery document indexing',
+        'Hybrid retrieval with RRF',
+        'Streaming RAG answers',
+        'Source citations',
+        'Retrieval Debug Panel',
+        'Atomic credit billing',
+        'Usage logs',
+      ],
+      tech: ['Next.js App Router', 'TypeScript', 'FastAPI', 'SQLAlchemy', 'PostgreSQL/pgvector', 'Redis/Celery', 'LangGraph', 'DeepSeek/Qwen-ready', 'Docker', 'Vercel'],
+      visual: 'smartdocs',
+      links: {
+        live: 'https://smartdocs-ai-three.vercel.app',
+        github: 'https://github.com/Shifu710/smartdocs-ai',
+      },
+      caseStudy: {
+        overview: isZh
+          ? 'SmartDocs AI is the flagship enterprise RAG SaaS project, built to demonstrate a complete document intelligence workflow from guest demo to citations, credits, and usage logs.'
+          : 'SmartDocs AI is the flagship enterprise RAG SaaS project, built to demonstrate a complete document intelligence workflow from guest demo to citations, credits, and usage logs.',
+        problem: isZh
+          ? 'Enterprise AI demos often stop at a chatbot and do not show tenant isolation, document processing, observability, billing, or source-grounded answers.'
+          : 'Enterprise AI demos often stop at a chatbot and do not show tenant isolation, document processing, observability, billing, or source-grounded answers.',
+        solution: isZh
+          ? 'Build a production-style SaaS flow with workspace auth, document upload, indexing, hybrid retrieval, streamed answers, source citations, debug visibility, and credit-safe usage logging.'
+          : 'Build a production-style SaaS flow with workspace auth, document upload, indexing, hybrid retrieval, streamed answers, source citations, debug visibility, and credit-safe usage logging.',
+        architecture: isZh
+          ? 'Next.js handles the app UI, FastAPI exposes layered routers and services, PostgreSQL/pgvector stores workspaces and chunks, Redis/Celery processes documents, and the RAG service streams answer events.'
+          : 'Next.js handles the app UI, FastAPI exposes layered routers and services, PostgreSQL/pgvector stores workspaces and chunks, Redis/Celery processes documents, and the RAG service streams answer events.',
+        aiWorkflow: isZh
+          ? 'The demo path is clearly labeled demo-local until real DeepSeek or Qwen keys are configured, so reviewers can test the product loop without fake provider claims.'
+          : 'The demo path is clearly labeled demo-local until real DeepSeek or Qwen keys are configured, so reviewers can test the product loop without fake provider claims.',
+        learning: isZh
+          ? 'The key learning was connecting RAG architecture to product constraints: RBAC, workspace isolation, source citations, atomic credit deduction, failure-safe logging, and deployment reality.'
+          : 'The key learning was connecting RAG architecture to product constraints: RBAC, workspace isolation, source citations, atomic credit deduction, failure-safe logging, and deployment reality.',
+        screenshots: isZh ? 'Screenshots are planned for README and portfolio polish.' : 'Screenshots are planned for README and portfolio polish.',
+      },
+    },
     {
       slug: 'ai-workstation-credits-mvp',
       title: 'AI Workstation Credits MVP',
