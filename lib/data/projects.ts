@@ -11,7 +11,17 @@ export type Project = {
   businessValue: string
   features: string[]
   tech: string[]
-  visual: 'smartdocs' | 'ai-crm' | 'credits' | 'wechat' | 'resume' | 'portfolio' | 'weather' | 'taskflow' | 'commerce'
+  visual:
+    | 'smartdocs'
+    | 'agentops'
+    | 'ai-crm'
+    | 'credits'
+    | 'wechat'
+    | 'resume'
+    | 'portfolio'
+    | 'weather'
+    | 'taskflow'
+    | 'commerce'
   image?: {
     src: string
     alt: string
@@ -95,6 +105,61 @@ export function getProjects(locale: Locale): Project[] {
           ? 'The key learning was connecting RAG architecture to product constraints: RBAC, workspace isolation, source citations, atomic credit deduction, failure-safe logging, and deployment reality.'
           : 'The key learning was connecting RAG architecture to product constraints: RBAC, workspace isolation, source citations, atomic credit deduction, failure-safe logging, and deployment reality.',
         screenshots: isZh ? 'Screenshots are planned for README and portfolio polish.' : 'Screenshots are planned for README and portfolio polish.',
+      },
+    },
+    {
+      slug: 'taskflow-ai',
+      title: 'TaskFlow AI',
+      status: 'In Progress',
+      statusLabel: isZh ? 'Flagship-level MVP' : 'Flagship-level MVP',
+      description: isZh
+        ? 'An AI Agent workflow automation platform MVP with real LangGraph-controlled execution, executable tool calls, human approval pause/resume, SSE live trace, usage logs, credits, replay, and an AgentOps dashboard.'
+        : 'An AI Agent workflow automation platform MVP with real LangGraph-controlled execution, executable tool calls, human approval pause/resume, SSE live trace, usage logs, credits, replay, and an AgentOps dashboard.',
+      businessValue: isZh
+        ? 'Shows a higher-value agent engineering skill set beyond chatbots and RAG: stateful workflow execution, tool routing, approval gates, reliability limits, audit logs, and an honest demo-local fallback.'
+        : 'Shows a higher-value agent engineering skill set beyond chatbots and RAG: stateful workflow execution, tool routing, approval gates, reliability limits, audit logs, and an honest demo-local fallback.',
+      features: [
+        'Guest demo login',
+        'Real LangGraph runtime',
+        'Stateful agent runs',
+        'MCP-style internal tool gateway',
+        'Executable demo tools',
+        'Human approval pause/resume',
+        'SSE live run trace',
+        'Retry and error handling',
+        'Max step and cost limits',
+        'Usage logs and credits',
+        'Run replay endpoint',
+        'AgentOps dashboard',
+        'Technical review page',
+      ],
+      tech: ['Next.js App Router', 'TypeScript', 'FastAPI', 'Python', 'LangGraph', 'SQLAlchemy', 'Pydantic', 'React Flow', 'Recharts', 'Tailwind CSS', 'Docker Compose'],
+      visual: 'agentops',
+      links: {
+        github: 'https://github.com/Shifu710/taskflow-ai',
+      },
+      caseStudy: {
+        overview: isZh
+          ? 'TaskFlow AI is Project 2 in the portfolio: a flagship-level MVP focused on AI Agent workflow automation instead of another support dashboard or document RAG app.'
+          : 'TaskFlow AI is Project 2 in the portfolio: a flagship-level MVP focused on AI Agent workflow automation instead of another support dashboard or document RAG app.',
+        problem: isZh
+          ? 'Many agent demos show a nice UI but hide the runtime. They do not prove stateful execution, tool calls, approval checkpoints, retries, cost controls, or run-level observability.'
+          : 'Many agent demos show a nice UI but hide the runtime. They do not prove stateful execution, tool calls, approval checkpoints, retries, cost controls, or run-level observability.',
+        solution: isZh
+          ? 'Refactor the runtime so LangGraph controls the workflow path through load, permission validation, initialization, planner, tool router, tool execution, approval gate, agent execution, reviewer, finalize, and error handling nodes.'
+          : 'Refactor the runtime so LangGraph controls the workflow path through load, permission validation, initialization, planner, tool router, tool execution, approval gate, agent execution, reviewer, finalize, and error handling nodes.',
+        architecture: isZh
+          ? 'Next.js provides the product UI and live run pages. FastAPI exposes workflow, run, approval, replay, usage, and gateway routes. SQLAlchemy persists workspaces, runs, run steps, tool calls, approvals, usage logs, credits, and replayable outputs.'
+          : 'Next.js provides the product UI and live run pages. FastAPI exposes workflow, run, approval, replay, usage, and gateway routes. SQLAlchemy persists workspaces, runs, run steps, tool calls, approvals, usage logs, credits, and replayable outputs.',
+        aiWorkflow: isZh
+          ? 'The guest demo uses demo-local model behavior and seeded demo search so reviewers can run it without private API keys. External write tools are clearly simulated in demo mode, while internal tool execution and approval flow are real.'
+          : 'The guest demo uses demo-local model behavior and seeded demo search so reviewers can run it without private API keys. External write tools are clearly simulated in demo mode, while internal tool execution and approval flow are real.',
+        learning: isZh
+          ? 'The main learning was making the agent runtime reviewable: graph nodes mutate state, persist transitions, pause for approval from inside the graph, resume the same run, and keep usage and cost records honest.'
+          : 'The main learning was making the agent runtime reviewable: graph nodes mutate state, persist transitions, pause for approval from inside the graph, resume the same run, and keep usage and cost records honest.',
+        screenshots: isZh
+          ? 'The GitHub repository is available now. A public hosted demo is the next deployment step after Vercel/backend hosting configuration.'
+          : 'The GitHub repository is available now. A public hosted demo is the next deployment step after Vercel/backend hosting configuration.',
       },
     },
     {

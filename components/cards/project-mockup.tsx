@@ -4,6 +4,7 @@ import type { Project } from '@/lib/data/projects'
 
 const visualLabels: Record<Project['visual'], string> = {
   smartdocs: 'RAG SaaS',
+  agentops: 'AgentOps',
   'ai-crm': 'AI CRM',
   credits: 'Credits',
   wechat: 'WeChat',
@@ -34,6 +35,42 @@ export function ProjectMockup({
           className="object-cover object-top"
         />
       </figure>
+    )
+  }
+
+  if (visual === 'agentops') {
+    return (
+      <div className="min-h-48 overflow-hidden rounded-lg border bg-muted p-4">
+        <div className="flex items-center justify-between">
+          <span className="badge badge-neutral">{visualLabels[visual]}</span>
+          <i className="ti ti-git-branch text-[18px] text-muted-foreground" aria-hidden="true" />
+        </div>
+        <div className="mt-5 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+          {['Planner', 'Tool', 'Approval'].map((label, index) => (
+            <div key={label} className="contents">
+              <div className="rounded-lg border bg-card p-3">
+                <div className="h-2 w-12 rounded-full bg-[var(--ramp-blue-bg)]" />
+                <p className="mt-2 text-xs font-medium leading-[1.4] text-foreground">{label}</p>
+              </div>
+              {index < 2 ? <div className="h-px w-5 bg-border" /> : null}
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 grid grid-cols-3 gap-3">
+          <div className="rounded-lg bg-card p-3">
+            <div className="h-8 rounded-md bg-[var(--ramp-green-bg)]" />
+            <div className="mt-2 h-2 w-10 rounded-full bg-muted" />
+          </div>
+          <div className="rounded-lg bg-card p-3">
+            <div className="h-8 rounded-md bg-[var(--ramp-amber-bg)]" />
+            <div className="mt-2 h-2 w-12 rounded-full bg-muted" />
+          </div>
+          <div className="rounded-lg bg-card p-3">
+            <div className="h-8 rounded-md bg-[var(--color-background-info)]" />
+            <div className="mt-2 h-2 w-9 rounded-full bg-muted" />
+          </div>
+        </div>
+      </div>
     )
   }
 
