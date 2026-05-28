@@ -110,8 +110,8 @@ export function getProjects(locale: Locale): Project[] {
     {
       slug: 'taskflow-ai',
       title: 'TaskFlow AI',
-      status: 'In Progress',
-      statusLabel: isZh ? 'Flagship-level MVP' : 'Flagship-level MVP',
+      status: 'Live',
+      statusLabel: isZh ? 'Public portfolio demo' : 'Public portfolio demo',
       description: isZh
         ? 'An AI Agent workflow automation platform MVP with real LangGraph-controlled execution, executable tool calls, human approval pause/resume, SSE live trace, usage logs, credits, replay, and an AgentOps dashboard.'
         : 'An AI Agent workflow automation platform MVP with real LangGraph-controlled execution, executable tool calls, human approval pause/resume, SSE live trace, usage logs, credits, replay, and an AgentOps dashboard.',
@@ -133,9 +133,10 @@ export function getProjects(locale: Locale): Project[] {
         'AgentOps dashboard',
         'Technical review page',
       ],
-      tech: ['Next.js App Router', 'TypeScript', 'FastAPI', 'Python', 'LangGraph', 'SQLAlchemy', 'Pydantic', 'React Flow', 'Recharts', 'Tailwind CSS', 'Docker Compose'],
+      tech: ['Next.js App Router', 'TypeScript', 'FastAPI', 'Python', 'PostgreSQL', 'SQLAlchemy', 'Alembic', 'LangGraph', 'Pydantic', 'React Flow', 'Recharts', 'Tailwind CSS', 'Vercel', 'Render'],
       visual: 'agentops',
       links: {
+        live: 'https://taskflow-ai-seven-eosin.vercel.app',
         github: 'https://github.com/Shifu710/taskflow-ai',
       },
       caseStudy: {
@@ -158,8 +159,8 @@ export function getProjects(locale: Locale): Project[] {
           ? 'The main learning was making the agent runtime reviewable: graph nodes mutate state, persist transitions, pause for approval from inside the graph, resume the same run, and keep usage and cost records honest.'
           : 'The main learning was making the agent runtime reviewable: graph nodes mutate state, persist transitions, pause for approval from inside the graph, resume the same run, and keep usage and cost records honest.',
         screenshots: isZh
-          ? 'The GitHub repository is available now. A public hosted demo is the next deployment step after Vercel/backend hosting configuration.'
-          : 'The GitHub repository is available now. A public hosted demo is the next deployment step after Vercel/backend hosting configuration.',
+          ? 'Public live demo is available at https://taskflow-ai-seven-eosin.vercel.app with guest login, workflow execution, approval pause/resume, and replay.'
+          : 'Public live demo is available at https://taskflow-ai-seven-eosin.vercel.app with guest login, workflow execution, approval pause/resume, and replay.',
       },
     },
     {
